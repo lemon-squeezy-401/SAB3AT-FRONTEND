@@ -1,9 +1,10 @@
 import React from 'react';
+import VerticalSlider from '../Vertical-Slider/VerticalSlider';
 
 function LandingPage() {
   return (
     <div>
-      landing page
+      <VerticalSlider/>
     </div>
   );
 }

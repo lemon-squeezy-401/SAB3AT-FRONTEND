@@ -19,11 +19,11 @@ function Nanbar() {
   });
 
   return (
-    <div id = 'con'>
+    <div id = 'con' className = 'navbar-body'>
       <nav className={navbar? 'nav active' : 'nav' }>
         <div className="container">
           <h1 className="logo"><a href="/">$SAB3AT$</a></h1>
-          <ul>
+          <ul className = 'navbar-ul'>
             <li><a href="/home" className="current">Home</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/contact">Login</a></li>
