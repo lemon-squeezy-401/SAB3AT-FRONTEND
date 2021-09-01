@@ -1,5 +1,6 @@
 import React, { useState ,useEffect } from 'react';
 import './navbar.css';
+import cartIcon from '../../assets/cart.svg';
 
 function Nanbar() {
   const [navbar, setNavbar] = useState(false);
@@ -20,15 +21,16 @@ function Nanbar() {
 
   return (
     <div id = 'con' className = 'navbar-body'>
-      <nav className={navbar? 'nav active' : 'nav' }>
-        <div className="container">
-          <h1 className="logo"><a href="/">$SAB3AT$</a></h1>
+      <nav className={navbar? 'nav active-nav' : 'nav' }>
+        <div className="nav-container">
+          <h1 className="nav-logo"><a href="/">$SAB3AT$</a></h1>
           <ul className = 'navbar-ul'>
-            <li><a href="/home" className="current">Home</a></li>
+            <li><a href="/home" className="nav-current">Home</a></li>
             <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Login</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/cart">Cart</a></li>
+            <li><a href="/cart">Cart <img src={cartIcon} alt="any" /></a></li>
           </ul>
         </div>
       </nav>
