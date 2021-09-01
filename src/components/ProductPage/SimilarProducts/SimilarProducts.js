@@ -1,5 +1,5 @@
-import React from "react";
-import "./SimilarProducts.css";
+import React from 'react';
+import './SimilarProducts.css';
 function SimilarProducts() {
   return (
     // {

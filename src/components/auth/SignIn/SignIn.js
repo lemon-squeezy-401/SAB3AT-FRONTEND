@@ -1,12 +1,12 @@
-import React from "react";
-import "./SignIn.css";
+import React from 'react';
+import './signIn.css';
 
 function SignUp() {
   return (
     <>
       <div id="login-box">
         <div class="left">
-          <h1>Sign In</h1>
+          <h1 className='singin-h1'>Sign In</h1>
 
           <input type="text" name="email" placeholder="E-mail" />
           <input type="password" name="password" placeholder="Password" />
