@@ -6,7 +6,7 @@ import './Footer.css';
 function Footer() {
   return (
     <section id='footer' className = 'footer-body'>
-      <div className='container'>
+      <div className='footer-container'>
         <div className='row text-center text-xs-center text-sm-left text-md-left'>
 
           <div className='col-xs-12 col-sm-4 col-md-4'>
