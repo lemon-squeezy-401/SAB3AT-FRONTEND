@@ -1,7 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './addservice.css';
 
 function AddService() {
+  const [title, setTitle] = useState('');
+  const [SKU, setSKU] = useState('');
+  const [price, setPrice] = useState('');
+  const [description, setDescription] = useState('');
+  const [isAvailable, setIsAvailable] = useState('');
+
+  const handleTitle = (event) => {
+    setTitle(event.target.value);
+    // console.log(title);
+  }
+
+  const handleSKU = (event) => {
+    setSKU(event.target.value);
+    // console.log(SKU);
+  }
+
+  const handlePrice = (event) => {
+    setPrice(event.target.value);
+    // console.log(price);
+  }
+
+  const handleDescription = (event) => {
+    setDescription(event.target.value);
+    // console.log(description);
+  }
+
+  const handleIsAvailable = (event) => {
+    setIsAvailable(event.target.value);
+    // console.log(isAvailable);
+  }
+
   return (
     <div>
       <div className = 'add-product-container'>
@@ -9,7 +40,7 @@ function AddService() {
         <form>
           <div className="form-group add1">
             <label>Service Title</label>
-            <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter The Product Name"/>
+            <input value = {title} onChange = {handleTitle} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter The Product Name"/>
           </div>
           <div className="row add1">
             <div className="col">
@@ -18,7 +49,7 @@ function AddService() {
                 <div className="input-group-prepend">
                   <div className="input-group-text">#</div>
                 </div>
-                <input type="text" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Service SKU"/>
+                <input value = {SKU} onChange = {handleSKU} type="text" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Service SKU"/>
               </div>
             </div>
             <div className="col">
@@ -27,7 +58,7 @@ function AddService() {
                 <div className="input-group-prepend">
                   <div className="input-group-text">$</div>
                 </div>
-                <input type = "text" required pattern="^[0-9]+([.])?[0-9]*([0-9]+)?$" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Price"/>
+                <input value = {price} onChange = {handlePrice} type = "text" required pattern="^[0-9]+([.])?[0-9]*([0-9]+)?$" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Price"/>
               </div>
             </div>
           </div>
@@ -37,11 +68,11 @@ function AddService() {
           </div>
           <div className="form-group add1">
             <label>Service Description</label>
-            <textarea name="pDesc" className="form-control" id="pDesc"></textarea>
+            <textarea value = {description} onChange = {handleDescription} name="pDesc" className="form-control" id="pDesc"></textarea>
           </div>
           <div className="form-check add1">
             <label>Is available</label>
-            <input className="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."/>
+            <input name = {isAvailable} onChange = {handleIsAvailable} className="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."/>
           </div>
           <button type="submit" className='add-ps-button'>Add Service</button>
         </form>

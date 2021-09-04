@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ServiceCards.css';
-import test from '../../../assets/test.jpg';
 export class ServicePage extends Component {
     render() {
         return (

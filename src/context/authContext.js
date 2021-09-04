@@ -31,7 +31,7 @@ function AuthSettings(props) {
   function validToken(token) {
     if(token !== 'null' && token !== undefined){
       const user = jwt.decode(token);
-      // console.log(user);
+      console.log(token);
       setLoginState(true, token, user);
     } else if(token === 'null') {
       setLoginState(false, null, {});
@@ -46,7 +46,7 @@ function AuthSettings(props) {
       cookie.save('acl', acl);
       setCapabilities(acl);
       validToken(response.body.token);
-      // console.log(response);
+      console.log(response.body.user.id);
     } catch (error) {
       console.error('Login Error', error.message);
     }
