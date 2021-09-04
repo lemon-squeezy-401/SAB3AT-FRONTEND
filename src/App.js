@@ -11,7 +11,8 @@ import ProductCards from './components/ProductPage/ProductCards/ProductCards';
 import ProductDetails from './components/ProductPage/ProductDetails/ProductDetails';
 import ServiceCards from './components/ServicePage/ServiceCards/ServiceCards.js';
 import ServiceDetails from './components/ServicePage/ServiceDetails/ServiceDetails';
-
+import ItemPage from './components/itemPage/ItemPage';
+import Cart from './components/ShoppingCart/ShoppingCart';
 function App() {
   return (
     <>
@@ -30,17 +31,30 @@ function App() {
                 <Profile />
               </Route>
               <Route exact path="/products">
-            <ProductCards />
-          </Route>
-          <Route exact path="/ProductDetails">
-            <ProductDetails />
-          </Route>
-          <Route exact path="/services">
-            <ServiceCards />
-          </Route>
-          <Route exact path="/ServiceDetails">
-            <ServiceDetails />
-          </Route>
+                <ProductCards />
+              </Route>
+              <Route exact path="/ProductDetails">
+                <ProductDetails />
+              </Route>
+              <Route exact path="/services">
+                <ServiceCards />
+              </Route>
+              <Route exact path="/ServiceDetails">
+                <ServiceDetails />
+              </Route>
+              <Route exact path="/item">
+                <ItemPage />
+              </Route>
+              <Route exact path="/cart">
+                <Cart />
+              </Route>
+              <Route
+                path="/admin"
+                component={() => {
+                  window.location.href = 'http://localhost:3001';
+                  return null;
+                }}
+              />
             </Switch>
             <Footer />
           </NavContext>
