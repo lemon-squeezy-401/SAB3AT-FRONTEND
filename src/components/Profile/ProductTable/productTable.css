@@ -1,0 +1,23 @@
+.sevice-con{
+  margin-top: 8rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.remove {
+  color: red;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+.remove:hover,
+.remove:active,
+.remove:focus {
+  outline-color: transparent;
+  font-weight: bold;
+  color: orange;
+  text-decoration: none;
+}

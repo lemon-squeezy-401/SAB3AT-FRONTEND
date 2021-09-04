@@ -1,7 +1,47 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../../../context/authContext';
 import './login.css';
 
 function Login() {
+  const authSettings = useContext(AuthContext);
+
+  /*==================Login===================== */
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  function handleEmail(event){
+    setEmail(event.target.value);
+  }
+
+  function handlePassword(event){
+    setPassword(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    authSettings.login(email, password);
+  };
+  /*==================Login===================== */
+
+  /*==================Signup===================== */
+  const [username, setUsername] = useState('');
+  const [role, setRole] = useState('user');
+
+  const handleUsername = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handleRole = (event) => {
+    setRole(event.target.value);
+    // console.log(event.target.value);
+  };
+
+  const handleSignup = (event) => {
+    event.preventDefault();
+    authSettings.signup(username, password, email, role);
+  };
+  /*==================Signup===================== */
+
   useEffect(() => {
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
@@ -20,7 +60,7 @@ function Login() {
     <div className = 'login-body'>
       <div className="login-container" id="container">
         <div className="form-container sign-up-container">
-          <form className = 'login-form' action="#">
+          <form onSubmit = {handleSignup} className = 'login-form' action="#">
             <h1 className = 'login-h1'>Create Account</h1>
             <div className="social-container">
               {/* <a href="#dsad" className="social login-a"><i className="fab fa-facebook-f"></i></a> */}
@@ -28,10 +68,10 @@ function Login() {
               {/* <a href="#sd" className="social login-a"><i className="fab fa-linkedin-in"></i></a> */}
             </div>
             {/* <span className = 'login-span'>or use your email for registration</span> */}
-            <input className = 'login-input' type="text" placeholder="Name" />
-            <input className = 'login-input' type="email" placeholder="Email" />
-            <input className = 'login-input' type="password" placeholder="Password" />
-            <select className = 'login-input' name="" id="">
+            <input onChange = {handleUsername} className = 'login-input' type="text" placeholder="Name" />
+            <input onChange = {handleEmail} className = 'login-input' type="email" placeholder="Email" />
+            <input onChange = {handlePassword} className = 'login-input' type="password" placeholder="Password" />
+            <select onChange = {handleRole} className = 'login-input' name="" id="">
               <option value="user">User</option>
               <option value="admin">Admin</option>
             </select>
@@ -39,7 +79,7 @@ function Login() {
           </form>
         </div>
         <div className="form-container sign-in-container">
-          <form className = 'login-form' action="#">
+          <form onSubmit = {handleSubmit} className = 'login-form' action="#">
             <h1 className = 'login-h1'>Sign in</h1>
             <div className="social-container">
               {/* <a href="#ds" className="social login-a"><i className="fab fa-facebook-f"></i></a> */}
@@ -47,8 +87,8 @@ function Login() {
               {/* <a href="#dsa" className="social login-a"><i className="fab fa-linkedin-in"></i></a> */}
             </div>
             {/* <span className = 'login-span'>or use your account</span> */}
-            <input className = 'login-input' type="email" placeholder="Email" />
-            <input className = 'login-input' type="password" placeholder="Password" />
+            <input onChange = {handleEmail} className = 'login-input' type="email" placeholder="Email" />
+            <input onChange = {handlePassword} className = 'login-input' type="password" placeholder="Password" />
             <a className = 'login-a' href="#asd">Forgot your password?</a>
             <button className = 'login-button'>Sign In</button>
           </form>
