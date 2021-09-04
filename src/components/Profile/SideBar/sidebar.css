@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.off-canvas{
+  width: 22%;
+}
+
+.side-ul{
+  list-style: none;
+  margin: 0 auto;
+}
+
+.side-li{
+  /* border: solid 1px #000; */
+  margin-bottom: 20px;
+  /* padding-left: 20px; */
+}
+
+.side-a{
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.side-a:hover{
+  color: #c0392b;
+}

@@ -4,12 +4,13 @@
   padding: 60px 0;
   padding-bottom: 1.1rem;
   /* position: relative; */
+  /* bottom: 0; */
+  width: 100%;
   margin-top: 20rem;
 }
 
 section .section-title {
   text-align: center;
-
   margin-bottom: 50px;
   text-transform: uppercase;
 }
@@ -19,12 +20,17 @@ section .section-title {
 #footer h5 {
   padding-left: 10px;
   padding-right: 1px;
-  border-left: 3px solid rgba(255, 0, 0, 0.699);
   /* height: 300px  ; */
   padding-bottom: 6px;
   margin-bottom: 20px;
   color: rgba(255, 0, 0, 0.699);
 }
+
+.footer-h5{
+  border-left: 3px solid rgba(255, 0, 0, 0.699);
+  border-right: 3px solid rgba(255, 0, 0, 0.699);
+}
+
 #footer a {
   color: rgba(255, 0, 0, 0.699);
   text-decoration: none !important;

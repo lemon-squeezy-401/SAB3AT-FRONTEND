@@ -5,24 +5,34 @@ import Footer from './components/Footer/Footer';
 import LandingPage from './components/Landing-page/LandingPage';
 import ProductPage from './components/ProductPage/ProductPage';
 import Login from './components/auth/Login/Login';
+import AuthContext from './context/authContext';
+import Profile from './components/Profile/Profile';
+import NavContext from './context/navContext';
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route exact path="/product">
-            <ProductPage />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-        </Switch>
-        <Footer />
+        <AuthContext>
+          <NavContext>
+            <Navbar />
+            <Switch>
+              <Route exact path="/">
+                <LandingPage />
+              </Route>
+              <Route exact path="/product">
+                <ProductPage />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/dashboard">
+                <Profile />
+              </Route>
+            </Switch>
+            <Footer />
+          </NavContext>
+        </AuthContext>
       </Router>
     </>
   );

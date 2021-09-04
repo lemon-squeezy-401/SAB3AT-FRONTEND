@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-info {
+  margin-top: 200px;
+  margin-bottom: -100px;
+}
+
+.profile-info h1{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.profile-ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-info-ul {
+  list-style: none;
+  text-align: center;
+}
+
+.profile-info-li {
+  font-weight: 600;
+}

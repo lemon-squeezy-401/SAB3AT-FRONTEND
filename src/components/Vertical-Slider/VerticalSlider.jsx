@@ -78,11 +78,11 @@ function VerticalSlider() {
           <div id = 'second'></div>
         </div>
         <div className="action-buttons">
-          <button className="down-button">
+          <button className="down-button vertical-button">
             {/* <i className="fas fa-arrow-down">{downArrow}</i> */}
             <img className="fas fa-arrow-down" src={downArrow} alt="any" />
           </button>
-          <button className="up-button">
+          <button className="up-button vertical-button">
             {/* <i className="fas fa-arrow-up">{upArrow}</i> */}
             <img className="fas fa-arrow-up" src={upArrow} alt="any" />
           </button>
