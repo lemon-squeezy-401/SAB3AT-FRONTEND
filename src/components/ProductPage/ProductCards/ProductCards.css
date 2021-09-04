@@ -1,0 +1,233 @@
+:root {
+    --df_color:rgba(255, 0, 0, 0.829);
+  }
+  
+     /* @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');   */
+  
+    
+  * {
+      margin: 0;
+      padding: 0;
+      /* font-family: 'Source Sans Pro', sans-serif; */
+  }
+  .card-Container1 {
+      /* position: relative;
+      top: 20 ; */
+      margin-left: 13rem;
+      margin-top: 29rem;
+      transform: translate(-50%,-50%);
+      height: 670px;
+      /* margin-top: -1px !important; */
+      width: 19rem;
+      
+   }
+  .card_head1 {
+      position: relative; 
+      height: 225px;
+      border-radius: 5px 2px 0 0;
+      background: linear-gradient(-90deg,#ffffff,var(--df_color));
+      /* border: 1px solid  #ffc7b3; */
+      border-bottom: none;
+  }
+  .logo1 {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      width: 40px;
+  }
+  .shoes1 {
+      position: absolute;
+      left: 100px;
+      bottom: 0px;
+      width: 250px;
+      z-index: 1;
+  }
+  .shoes_caption1 {
+      position: absolute;
+      top:50px;
+      left: 20px;
+      width: 260px;
+      letter-spacing: 1px;
+      font-weight: 400;
+  }
+  .more_info1 {
+      position: absolute;
+      top:95px;
+      left: 8px;
+      color: black;
+      width: 80px;
+
+  }
+  
+  .more_info1 a{
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight:500;
+     z-index: 1; 
+  } 
+  
+  .back_text1 {
+      position: absolute;
+      bottom: 0px;
+      left: 5px;
+      opacity: .07;
+      font-size: 80px;
+      font-weight: bold;
+  }
+  
+  /*********** card-body **************/
+  
+  .card_body1 {
+      height: 285px;
+    border: 1px solid rgba(0, 0, 0, 0.336); 
+      border-top: none;
+      border-radius: 0 0 20px 20px;
+  }
+  .shoes_info1 {
+    position: relative;
+    top:12px;
+    left: 10px;
+  }
+  .badge1 {
+      position: relative;
+      left: 3.5em;
+      top: 10px;
+      background-color: yellowgreen;
+      color: white;
+      font-size: 12px;
+      padding: 3px 5px 3px 5px;
+      border-radius: 3px;
+      letter-spacing: .5px;
+  }
+  .shoes_rating1 {
+      position: relative;
+      left: 10px;
+      top:17px;
+      display:block;
+      font-size: 10px;
+  }
+  .shoes_rating i.gray {
+      color:#acacab;
+  } 
+  .shoes_price1 {
+      position: relative;
+      left: 10px;
+      top: 24px;
+      font-size: 14px;
+      display: block;
+      font-weight: bold;
+  }
+  .shoes_price1 .price1 {
+      font-size: 13px;
+  }
+  .shoes_price1 .tag {
+      margin-left: 5px;
+  }
+  .shoes_price1 .rs {
+      font-size: 19px;
+  }
+  .shoes_size1 {
+      position: relative;
+      left: 10px;
+      top: 40px;
+      font-size: 14px;
+  
+  }
+  .shoes_size1 a{
+      text-decoration: none;
+      color: black;
+      margin-left: 5px;
+  }
+  .size_chart1 {
+      font-size: 12px;
+  }
+  #select {
+     
+      border-radius: 5px;
+      opacity: .7;
+      text-align: center  ;
+      margin-left: 12px;
+      cursor: pointer;
+      width: 120px !important;
+  }
+  pre{
+      display: inline;
+  }
+  .shoes_color1 {
+      position: relative;
+      left: 10px;
+      top: 65px;
+      font-size: 14px;
+      display: block;
+    } 
+  
+  .ul_color1 {
+      display: inline;
+  }
+  .shoes_color1 ul li {
+      list-style: none;
+      float: left;
+      margin-right: 20px;
+  }
+  .shoes_color1 ul li:first-child{
+      margin-right: 7em;
+  }
+  .shoes_color1 ul li a {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 5px;
+  }
+  .shoes_color1 ul li a.orange {
+      background-color: #ff4500;
+  }
+  .shoes_color1 ul li a.green {
+      background-color: green;
+  }
+  .shoes_color ul li a.blue {
+      background-color: blue;
+  }
+  .ul_color1 li a.active:after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      height: 21px;
+      width: 21px;
+      border: 1.5px dotted darkgray;
+      border-radius: 5px;
+      margin-top: -3.6px;
+      margin-left: -4px;
+  }
+  .shoes_buy1 {
+      position: absolute;
+      top: 28em !important;
+      /* bottom: 1rem; */
+      left: 4.1em;
+      display: inline;
+   
+       
+  }
+  .shoes_buy1 i{
+      font-size: 19px;
+  }
+  
+  .shoes_buy1 button {
+      display: inline;
+      background-color:var(--df_color);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      padding: 7px 15px;
+      opacity: .85;  
+      font-size: 16px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: 500;
+  }
+  
+   .customized1 {
+     width: 20rem   ;
+    
+  }  
+  
+ 

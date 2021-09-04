@@ -1,5 +1,7 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
+:root {
+  --df_color:rgba(255, 0, 0, 0.699);
+}
 .footer-body {
   padding: 60px 0;
   padding-bottom: 1.1rem;
@@ -19,14 +21,14 @@ section .section-title {
 #footer h5 {
   padding-left: 10px;
   padding-right: 1px;
-  border-left: 3px solid rgba(255, 0, 0, 0.699);
+  border-left: 3px solid var(--df_color);
   /* height: 300px  ; */
   padding-bottom: 6px;
   margin-bottom: 20px;
-  color: rgba(255, 0, 0, 0.699);
+  color: var(--df_color) ;
 }
 #footer a {
-  color: rgba(255, 0, 0, 0.699);
+  color: var(--df_color);
   text-decoration: none !important;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
