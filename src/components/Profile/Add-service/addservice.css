@@ -8,3 +8,12 @@
 .add1{
   margin-bottom: 1rem;
 }
+
+.add-ps-button{
+  background-color: #0275d8;
+  color: #fff;
+  height: 2rem;
+  width: 7rem;
+  border-radius: 5px;
+  border: 0;
+}

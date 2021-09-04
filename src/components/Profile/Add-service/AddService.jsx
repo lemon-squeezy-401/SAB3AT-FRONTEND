@@ -43,7 +43,7 @@ function AddService() {
             <label>Is available</label>
             <input className="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."/>
           </div>
-          <button type="submit" className="btn btn-primary">Add Service</button>
+          <button type="submit" className='add-ps-button'>Add Service</button>
         </form>
       </div>
     </div>

@@ -37,14 +37,14 @@ function VerticalSlider() {
     const changeSlide = (direction) => {
       try {
         const sliderHeight = sliderContainer.clientHeight;
-        if(direction === 'up') {
+        if (direction === 'up') {
           activeSlideIndex++;
-          if(activeSlideIndex > slidesLength - 1) {
+          if (activeSlideIndex > slidesLength - 1) {
             activeSlideIndex = 0;
           }
-        } else if(direction === 'down') {
+        } else if (direction === 'down') {
           activeSlideIndex--;
-          if(activeSlideIndex < 0) {
+          if (activeSlideIndex < 0) {
             activeSlideIndex = slidesLength - 1;
           }
         }
@@ -59,23 +59,23 @@ function VerticalSlider() {
   }, []);
 
   return (
-    <div className = 'slider-body'>
+    <div className='slider-body'>
       <div className="slider-container">
         <div className="left-slide">
-          <div style={{backgroundColor: '#192E33'}}>
+          <div style={{ backgroundColor: '#192E33' }}>
             <h1>Products</h1>
             <p>in the wilderness</p>
-            <div onClick = {productPath} className = 'path'>Check it out</div>
+            <div onClick={productPath} className='path'>Check it out</div>
           </div>
-          <div style={{backgroundColor: '#252E33'}}>
+          <div style={{ backgroundColor: '#252E33' }}>
             <h1>Services</h1>
             <p>Our website is providing a lot of things</p>
-            <div onClick = {servicesPath} className = 'path'>Check it out</div>
+            <div onClick={servicesPath} className='path'>Check it out</div>
           </div>
         </div>
-        <div className = "right-slide">
-          <div id = 'first'></div>
-          <div id = 'second'></div>
+        <div className="right-slide">
+          <div id='first'></div>
+          <div id='second'></div>
         </div>
         <div className="action-buttons">
           <button className="down-button vertical-button">

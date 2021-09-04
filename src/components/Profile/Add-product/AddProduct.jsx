@@ -42,7 +42,7 @@ function AddProduct() {
           <label>Is available</label>
           <input className="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."/>
         </div>
-        <button type="submit" className="btn btn-primary">Add Product</button>
+        <button type="submit" className="add-ps-button">Add Product</button>
       </form>
     </div>
   );
