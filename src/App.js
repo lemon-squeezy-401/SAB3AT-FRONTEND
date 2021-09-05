@@ -30,17 +30,17 @@ function App() {
                 <Profile />
               </Route>
               <Route exact path="/products">
-            <ProductCards />
-          </Route>
-          <Route exact path="/ProductDetails">
-            <ProductDetails />
-          </Route>
-          <Route exact path="/services">
-            <ServiceCards />
-          </Route>
-          <Route exact path="/ServiceDetails">
-            <ServiceDetails />
-          </Route>
+                <ProductCards />
+              </Route>
+              <Route exact path="/ProductDetails">
+                <ProductDetails />
+              </Route>
+              <Route exact path="/services">
+                <ServiceCards />
+              </Route>
+              <Route exact path="/ServiceDetails">
+                <ServiceDetails />
+              </Route>
             </Switch>
             <Footer />
           </NavContext>
