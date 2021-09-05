@@ -6,8 +6,10 @@ import './addproduct.css';
 function AddProduct() {
   const API = 'https://sab3at.herokuapp.com';
   const authSettings = useContext(AuthContext);
-  console.log(authSettings);
+  console.log('this auth setting log from add product code =G',authSettings);
 
+  const {user} = authSettings
+  console.log('log only user from add product extracted from auth consext',user);
 
   const [title, setTitle] = useState('');
   const [SKU, setSKU] = useState('');
@@ -51,9 +53,9 @@ function AddProduct() {
         description: description,
         isAvailable: isAvailable
       };
-      const response = await axios.post(`${API}/profile-product/613088dc1467ca00167bcc5f`, data);
+      const response = await axios.post(`${API}/profile-product/${user.id}`, data);
       setProductsList([...productsList, response]);
-      console.log(productsList);
+      console.log('this is the product list log from add product =D',productsList);
     } catch (error) {
       console.error('Adding Error', error);
     }
