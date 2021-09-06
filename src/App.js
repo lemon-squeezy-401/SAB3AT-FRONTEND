@@ -11,7 +11,7 @@ import ProductCards from './components/ProductPage/ProductCards/ProductCards';
 import ProductDetails from './components/ProductPage/ProductDetails/ProductDetails';
 import ServiceCards from './components/ServicePage/ServiceCards/ServiceCards.js';
 import ServiceDetails from './components/ServicePage/ServiceDetails/ServiceDetails';
-
+import AboutUs from './components/AboutUs/AboutUs';
 function App() {
   return (
     <>
@@ -40,6 +40,9 @@ function App() {
               </Route>
               <Route exact path="/ServiceDetails">
                 <ServiceDetails />
+              </Route>
+              <Route exact path="/about">
+                <AboutUs />
               </Route>
             </Switch>
             <Footer />
