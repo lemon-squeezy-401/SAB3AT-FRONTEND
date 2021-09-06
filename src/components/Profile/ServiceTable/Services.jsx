@@ -1,51 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../../../context/authContext';
+import superagent from 'superagent';
+import axios from 'axios';
 import './services.css';
 
 function Services() {
-// add to table function
-  // useEffect(() => {
-  //   const prodListModule = (function() {
+  const API = 'https://sab3at.herokuapp.com';
+  const authSettings = useContext(AuthContext);
+  const [servicesList, setServicesList] = useState([]);
 
-  //     const addProdForm = document.getElementById('add-product-form');
-  //     const prodTable   = document.getElementById('products-list');
+  const getServicesData = async () => {
+    try {
+      const id =  authSettings.user.id;
+      const response = await axios.get(`${API}/profile/${id}`);
+      // console.log(response.data.products);
+      setServicesList(response.data.services);
+    } catch (error) {
+      console.error('Get products Error', error);
+    }
+  };
 
-  //     function init() {
-  //       addProdForm.addEventListener('submit', function(e) {
-  //         e.preventDefault();
-  //         let inStock = (addProdForm.pAvailability.checked) ? 'In stock' : 'Out of stock';
-  //         let rowString = `
-  //           <tr>
-  //             <th scope="row">${addProdForm.pSKU.value}</th>
-  //             <td>${addProdForm.pTitle.value}</td>
-  //             <td>${(+addProdForm.pPrice.value).toFixed(2)}$</td>
-  //             <td>${addProdForm.pDesc.value}</td>
-  //             <td>${inStock}</td>
-  //             <td><button className="remove">&#10008;</button></td>
-  //           </tr>`;
+  useEffect(() => {
+    getServicesData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[authSettings.user.id]);
 
-  //         prodTable.insertAdjacentHTML('beforeend', rowString);
-  //         addProdForm.querySelectorAll('input, textarea').forEach( (input) => input.value = '' );
-  //       });
-  //     };
+  const deleteService = async (_id) => {
+    try {
+      const userId = authSettings.user.id;
+      const data = {
+        _id: _id,
+      };
+      let response = await superagent.delete(`${API}/profile/${userId}`,data);
+      response = servicesList.filter( product => product._id !== _id );
+      console.log(response);
+      setServicesList(response);
+    } catch (error) {
+      console.error('Delete Error', error);
+    }
+  };
 
-  //     function removeRow() {
-  //       prodTable.addEventListener('click', function(e) {
-  //         if (e.target.classList.value === 'remove') {
-  //           prodTable.removeChild(e.target.parentElement.parentElement);
-  //         };
-  //       });
-  //     };
-
-  //     return {
-  //       init: init,
-  //       close: removeRow
-  //     };
-
-  //   }());
-
-  //   prodListModule.init();
-  //   prodListModule.close();
-  // });
 
   return (
     <div className = 'sevice-con'>
@@ -63,15 +57,21 @@ function Services() {
           </tr>
         </thead>
         <tbody id="products-list">
-          <tr>
-            <th scope="row">D33H1</th>
-            <td>Macbook pro 13 inch</td>
-            <td>1500$</td>
-            <td>13-inch MacBook Pro with Retina display</td>
-            <td>In stock</td>
-            <td><button className="remove">&#10002;</button></td>
-            <td><button className="remove">&#10008;</button></td>
-          </tr>
+          {servicesList.map((service) => {
+            return (
+              <>
+                <tr>
+                  <th scope="row">D33H1</th>
+                  <td>{service.title}</td>
+                  <td>{service.price} $</td>
+                  <td>{service.description}</td>
+                  <td>In stock</td>
+                  <td><button className="remove">&#10002;</button></td>
+                  <td><button onClick = {() => deleteService(service._id)} className="remove">&#10008;</button></td>
+                </tr>
+              </>
+            );
+          })}
         </tbody>
       </table>
       <br />

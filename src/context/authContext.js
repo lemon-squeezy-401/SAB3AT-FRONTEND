@@ -31,7 +31,7 @@ function AuthSettings(props) {
   function validToken(token) {
     if (token !== 'null' && token !== undefined) {
       const user = jwt.decode(token);
-      console.log(token);
+      // console.log(user);
       setLoginState(true, token, user);
     } else if (token === 'null') {
       setLoginState(false, null, {});

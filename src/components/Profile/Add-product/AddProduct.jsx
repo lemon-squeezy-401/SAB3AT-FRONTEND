@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext} from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../../context/authContext';
 import './addproduct.css';
@@ -7,6 +7,7 @@ function AddProduct() {
   const API = 'https://sab3at.herokuapp.com';
   const authSettings = useContext(AuthContext);
   console.log('this auth setting log from add product code =G',authSettings);
+  // console.log(authSettings);
 
   const {user} = authSettings
   console.log('log authSettings from add product extracted from auth consext',authSettings);
@@ -21,27 +22,27 @@ function AddProduct() {
   const handleTitle = (event) => {
     setTitle(event.target.value);
     // console.log(title);
-  }
+  };
 
   const handleSKU = (event) => {
     setSKU(event.target.value);
     // console.log(SKU);
-  }
+  };
 
   const handlePrice = (event) => {
     setPrice(event.target.value);
     // console.log(price);
-  }
+  };
 
   const handleDescription = (event) => {
     setDescription(event.target.value);
     // console.log(description);
-  }
+  };
 
   const handleIsAvailable = (event) => {
     setIsAvailable(event.target.value);
     // console.log(isAvailable);
-  }
+  };
 
   const handleSubmit = async (event) => {
     try {
@@ -53,44 +54,14 @@ function AddProduct() {
         description: description,
         isAvailable: isAvailable
       };
-      const response = await axios.post(`${API}/profile-product/${user.id}`, data);
+      const id = authSettings.user.id;
+      const response = await axios.post(`${API}/profile-product/${id}`, data);
       setProductsList([...productsList, response]);
-      console.log('this is the product list log from add product =D',productsList);
+      // console.log(productsList);
     } catch (error) {
       console.error('Adding Error', error);
     }
-  }
-
-  const getAllUsers = async () => {
-    const config = {
-      headers: { Authorization: `Bearer ${authSettings.token}` },
-    };
-    const res = await axios.get(`${API}/users`, config);
-    console.log(res);
   };
-
-  useEffect(() =>{
-    getAllUsers();
-  });
-
-  // async function Name(event) {
-  //   event.preventDefault();
-  //   let response = () => {
-  //     return new Promise(function(resolve, reject) {
-  //       fetch(`${API}/profile-product/613088dc1467ca00167bcc5f`, {
-  //         method: 'post',
-  //         body: {
-  //           title: title,
-  //           description: description
-  //         }
-  //       }).then(response => {
-  //         resolve(response.json());
-  //       });
-  //     });
-  //   };
-  //   let responseData = await response();
-  //   console.log(responseData);
-  // }
 
   return (
     <div className = 'add-product-container'>
@@ -116,7 +87,7 @@ function AddProduct() {
               <div className="input-group-prepend">
                 <div className="input-group-text">$</div>
               </div>
-              <input onChange = {handlePrice} required pattern="^[0-9]+([.])?[0-9]*([0-9]+)?$" type = "text"  className="form-control" id="inlineFormInputGroupUsername2" placeholder="Price"/>
+              <input onChange = {handlePrice} required pattern="^[0-9]+([.])?[0-9]*([0-9]+)?$" type = "text" className="form-control" id="inlineFormInputGroupUsername2" placeholder="Price"/>
             </div>
           </div>
         </div>
