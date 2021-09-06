@@ -80,31 +80,6 @@ function App() {
                 <Footer />
               </CommentsProvider>
             </ServicesProvider>
-            <Navbar />
-            <Switch>
-              <Route exact path="/">
-                <LandingPage />
-              </Route>
-              <Route exact path="/login">
-                <Login />
-              </Route>
-              <Route exact path="/dashboard">
-                <Profile />
-              </Route>
-              <Route exact path="/products">
-                <ProductCards />
-              </Route>
-              <Route exact path="/ProductDetails">
-                <ProductDetails />
-              </Route>
-              <Route exact path="/services">
-                <ServiceCards />
-              </Route>
-              <Route exact path="/ServiceDetails">
-                <ServiceDetails />
-              </Route>
-            </Switch>
-            <Footer />
           </NavContext>
         </AuthContext>
       </Router>

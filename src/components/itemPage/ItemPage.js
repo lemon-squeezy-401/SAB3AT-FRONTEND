@@ -83,6 +83,7 @@ function ItemPage() {
                       </label>
                     </div>
                     <div>
+                      
                       <input
                         data-image="black"
                         type="radio"
