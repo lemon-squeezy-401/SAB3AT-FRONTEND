@@ -46,7 +46,7 @@ function AuthSettings(props) {
       cookie.save('acl', acl);
       setCapabilities(acl);
       validToken(response.body.token);
-      // console.log(response);
+      console.log(response.body.user.id);
     } catch (error) {
       console.error('Login Error', error.message);
     }
