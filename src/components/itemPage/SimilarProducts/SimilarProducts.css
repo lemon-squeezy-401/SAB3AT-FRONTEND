@@ -1,0 +1,108 @@
+.movie-similar {
+  margin: 7% 6%;
+}
+.section-header {
+  position: relative;
+  margin-bottom: 60px;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #cc364e;
+  text-align: center;
+}
+
+.section-header::after {
+  content: '...';
+  position: relative;
+  top: -5px;
+  left: 9px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  color: #cc364e;
+}
+.section-header::before {
+  content: '...';
+  position: relative;
+  top: -4px;
+  left: -9px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  color: #cc364e;
+}
+
+.movies-suf {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+.movie-card {
+  width: 265px;
+  color: #b5b5be;
+  text-decoration: none;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+.movie-card:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: scale(1.03);
+}
+
+.movie-card:not(:nth-of-type(4n + 1)) {
+  margin-left: 40px;
+}
+
+.movie-poster {
+  width: 265px;
+  height: 148px;
+}
+
+.movie-meta {
+  margin-top: 11px;
+  font-size: 0;
+}
+
+.movie-meta span {
+  padding: 0 3px;
+  border: 1px solid currentColor;
+  font-size: 13px;
+}
+
+.movie-meta p {
+  padding: 0 3px;
+  border: 1px solid currentColor;
+  font-size: 13px;
+}
+.rating {
+  width: 10%;
+}
+
+.movie-meta span + span {
+  margin-left: 5px;
+}
+
+.movie-lang {
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 0 7px 0 4px;
+}
+
+.movie-description {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 11px;
+}
+
+.movie-description-text + .movie-description-text {
+  margin-top: 15px;
+}
+
+.movie-title {
+  text-align: left;
+  font-size: 1rem;
+}

@@ -1,19 +1,25 @@
-import React from 'react';
-// import SimilarProducts from './SimilarProducts/SimilarProducts';
-import './ProductDetails.css';
-import img from './ProductPage.PNG';
-function ProductPage() {
+import React, { useContext } from 'react';
+import SimilarProducts from './SimilarProducts/SimilarProducts';
+import CommentsSection from './CommentsSection/CommentsSection';
+import './itemPage.css';
+import img from './cardImg.PNG';
+
+// import { ServicesContext } from '../../context/AllServices';
+import { CommentsContext } from '../../context/commentsContext';
+function ItemPage() {
+  // const { services, getServices } = useContext(ServicesContext);
+  // getServices();
+
+  const commentsContext = useContext(CommentsContext);
+  const { addComment } = commentsContext;
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <div className="product-html">
-        <div className="product-body">
-          <main class="container">
-            {/* <!--  Left Column / Headphones Image   --> */}
-
-            <div class="left-column">
+      {/* {console.log('log services from item page', services)} */}
+      <div classNameName="product-html">
+        <div classNameName="product-body">
+          <main className="container">
+            {/* <!-- Left Column / Headphones Image --> */}
+            <div className="left-column">
               <img
                 data-image="black"
                 src={
@@ -28,13 +34,13 @@ function ProductPage() {
                 }
                 alt=""
               />
-              <img data-image="red" class="active" src={img} alt="" />
+              <img data-image="red" className="active" src={img} alt="" />
             </div>
 
             {/* <!-- Right Column --> */}
-            <div class="right-column">
+            <div className="right-column">
               {/* <!-- Product Description --> */}
-              <div class="product-description">
+              <div className="product-description">
                 <span>Headphones</span>
                 <h1>Beats EP</h1>
                 <p>
@@ -45,12 +51,12 @@ function ProductPage() {
               </div>
 
               {/* <!-- Product Configuration --> */}
-              <div class="product-configuration">
+              <div className="product-configuration">
                 {/* <!-- Product Color --> */}
-                <div class="product-color">
+                <div className="product-color">
                   <span>Color</span>
 
-                  <div class="color-choose">
+                  <div className="color-choose">
                     <div>
                       <input
                         data-image="red"
@@ -92,10 +98,10 @@ function ProductPage() {
                 </div>
 
                 {/* <!-- Cable Configuration --> */}
-                <div class="cable-config">
+                <div className="cable-config">
                   <span>Cable configuration</span>
 
-                  <div class="cable-choose">
+                  <div className="cable-choose">
                     <button>Straight</button>
                     <button>Coiled</button>
                     <button>Long-coiled</button>
@@ -106,31 +112,22 @@ function ProductPage() {
               </div>
 
               {/* <!-- Product Pricing --> */}
-              <div class="product-price">
+              <div className="product-price">
                 <span>148$</span>
-                <a href={'/#'} class="cart-btn">
+                <a href={'/#'} className="cart-btn">
                   Add to cart
                 </a>
               </div>
             </div>
           </main>
-          <div style={{ margin: '10rem' }}></div>
+          <div style={{ margin: '5rem' }}></div>
         </div>
       </div>
+      <SimilarProducts />
 
-      {/* <SimilarProducts /> */}
-
-      {/* <div className="col px-0">
-        <Row>
-          <Col lg="6">
-
-            <SimilarProducts />
-            <SimilarProducts />
-          </Col>
-        </Row>
-      </div> */}
+      <CommentsSection />
     </>
   );
 }
 
-export default ProductPage;
+export default ItemPage;

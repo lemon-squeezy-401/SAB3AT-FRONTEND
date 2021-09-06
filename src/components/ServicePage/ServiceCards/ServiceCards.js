@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { Component } from 'react';
 import './ServiceCards.css';
 export class ServicePage extends Component {
@@ -21,8 +22,6 @@ export class ServicePage extends Component {
                             </div>
                         </div>
                     </div>
-
-
                     <div class="service1 card1">
                         <div >
                             <div class="product2">
@@ -39,8 +38,6 @@ export class ServicePage extends Component {
                             </div>
                         </div>
                     </div>
-
-
                     <div class="service1 card1">
                         <div >
                             <div class="product2">
@@ -58,10 +55,8 @@ export class ServicePage extends Component {
                             </div>
                         </div>
                     </div>
-
-
                     <div class="service1 card1">
-                        <div  >
+                        <div >
                             <div class="product2">
                                 <a href="/ " class="card_label product-title">Graphic Design</a>
                                 <img src="https://khamsat.hsoubcdn.com/images/services/1900956/30d3a6b4365823fa477b0baa87d62fab.jpg" alt="pic" />
@@ -79,8 +74,6 @@ export class ServicePage extends Component {
                             </div>
                         </div>
                     </div>
-
-
                     <div class="service1 card1">
                         <div >
                             <div class="product2">
@@ -97,7 +90,6 @@ export class ServicePage extends Component {
                             </div>
                         </div>
                     </div>
-
                     <div class="service1 card1">
                         <div >
                             <div class="product2">
@@ -114,10 +106,9 @@ export class ServicePage extends Component {
                             </div>
                         </div>
                     </div>
-
                 </nav>
             </div >
-        )
+        );
     }
 }
 export default ServicePage;
