@@ -1,106 +1,11 @@
  /* * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font: 100% sans-serif;
-  }
-  
- 
-  .services1 {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    flex-wrap: wrap;
-    
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
-    background-size: cover;
-    background-position: center;
-    margin-top: 5.5rem;
-    margin-bottom:-10rem;
-  }
-  
-  .services1 .service1 {
-    flex-grow: 1;
-    flex-basis: 33%;
-    min-width: 200px;
- 
-    align-items: stretch;
-    position: relative;
-    text-decoration: none;
-    background-color: hsla(0, 0%, 0%, 0.4);
-    transition: background-color 0.3s ease-out, padding 0.5s;
- 
-  }
-  
-  .services1 .card_label1 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-    text-align: left;
-    padding: 0 0 1.5rem 1.5rem;
-    z-index: 2;
-    position: relative;
-    text-transform: uppercase;
-    color: rgba(255, 0, 0, 0.849);
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
-    box-shadow: 0 0 0 2px hsla(0, 0%, 100%, .5);
- 
-  }
-  
-  .services1 .service1:hover {  
-    background-color: hsla(0, 0%, 0%, 0.6);
-  }
-  
-  .services1 .card_label1:after {
-    content: "  \0203A";  
-    position: relative;
-    left: 0;
-    top: 2px;
-    transition: left 0.5s ease-out;
-    width: 2rem;
-    height: 1rem;
-    line-height: 0;
-    font-size: 2rem;
-    letter-spacing: -4px;
-  }
-  
-  .services1 .service1:hover .card_label1::after,
-  .services1 .service1:focus .card_label1::after {
-    content: "  \0203A\0203A";
-    left: 1rem;
-  }
-   */
-
-   /*______________________________________________________________________*/
-
-   /* http://colormind.io/
-red CC3333
-blue 2FAAB3 or 209db3
-navy 293443
-yellow FDD96A
-beige C8D19A
-*/
-
-* {
   box-sizing: border-box;
-}
-
-body {
+} */
+/* body {
   font: 100% sans-serif;
-}
-
-/* SERVICES 
--------------------------------------- */
-.services1 {
+  */
+ 
+.services {
   position: relative;
   width: 100%;
   height: 80vh;
@@ -108,17 +13,17 @@ body {
   flex-direction: row;
   flex: 1;
   flex-wrap: wrap;
-  
   background-repeat: no-repeat;
   background-size: contain;
-  /* background-image: url(https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80); */
+  /* background-image: url(https://www.allevaconstruction.com/wp-content/uploads/2018/02/banner-financing.jpg);   */
   background-size: cover;
   background-position: center;
-  margin-top: 5.5rem;
-  margin-bottom:10rem;
+  margin-top: 4.8rem;
+  margin-left: 1.5rem;
+ padding: 2rem;
 }
 
-.services1 .service1 {
+.services .service1 {
   flex-grow: 1;
   flex-basis: 33%;
   min-width: 200px;
@@ -126,206 +31,190 @@ body {
   align-items: stretch;
   position: relative;
   text-decoration: none;
-  background-color: hsla(0, 100%, 99%, 0.4);
+  /* background-color: hsla(0, 0%, 0%, 0.4); */
   transition: background-color 0.3s ease-out, padding 0.5s;
-
-/*   box-shadow: 0 0 0 2px hsla(0, 0%, 100%, 1); */
-/*   outline: 2px solid hsla(0, 0%, 100%, .5); */
-/*   border: 3px solid hsla(0, 0%, 100%, .5); */
+  margin-bottom: 2rem;
+ 
+    /* box-shadow: 10 10 3 2px black;    
+  outline: 2px solid gray; 
+   border: 1px solid rgb(128, 128, 128)   ; */
 }
-
-.services1 .card_label1 {
+ 
+ .services .card_label {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: flex-end;
   text-align: left;
-  padding: 0 0 1.5rem 1.5rem;
+  padding: .5em 0 .5em 6rem;
   z-index: 2;
   position: relative;
   /* text-transform: uppercase; */
-  color: rgba(255, 0, 0, 0.849);
+ color: black;
+  font-weight: bold;
   font-size: 1.25rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 2px hsla(0, 0%, 100%, .5);
+  text-decoration: none;  
+    /* background-color: hsla(0, 0%, 0%, 0.25);  */
+    transition: background-color 0.3s ease-out, padding 0.5s; 
+ } 
+ 
+ /* .services .service1:hover {  
+  background-color: hsla(0, 0%, 0%, 0.6);
+}    */
 
-/*   background-color: hsla(0, 0%, 0%, 0.25); */
-/*   transition: background-color 0.3s ease-out, padding 0.5s; */
-}
-
-/* .services1 .service1:hover {  
-  background-color: rgba(255, 0, 0, 0.116);  
-   
-
-} */
-
-.services1 .card_label1:after {
-  content: "  \0203A"; /*  \027E9 &#8250; &rsaquo; */
+  .services .card_label:after {
+  content: " \0203A";        
   position: relative;
-  left: 0;
-  top: 2px;
+  left: 3px;
+  top: -1px;
   transition: left 0.5s ease-out;
   width: 2rem;
   height: 1rem;
   line-height: 0;
   font-size: 2rem;
-  letter-spacing: -4px;
-}
+  letter-spacing: 3px;
+} 
 
-.services1 .service1:hover .card_label1::after,
-.services1 .service1:focus .card_label1::after {
+.services .service1:hover .card_label::after,
+.services .service1:focus .card_label::after {
   content: "  \0203A\0203A";
-  left: 1rem;
+  left: .4rem;
 }
 
-
-/*______________________________________________________________________*/
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap');
+/*______________________________________________________*/
  
-#container {
-  
-    margin :0px  0px 20px 10px;  
-    background-repeat: no-repeat;
-}  
-
-.cardpic1{
-  position: relative;  
- 
-	box-shadow: 0 5px 5px -2px rgb(145, 124, 124);
- 	 /* background-color:  rgba(128, 128, 128, 0.185); */
-	text-align: center;
-	border-radius: 5px;
-	overflow: hidden;
-	/* margin: 0  auto; */
-	height: 370px;
- 	width: 450px;  
-  /* background-image: url(http://royaumeacademy.co.uk/wp-content/uploads/2015/06/translation-globe350.png); 
-  opacity: 0.5;*/
-  
-	background-repeat: no-repeat;
-background-size: cover;
-  background-position: center;
-}
-.cardpic1:hover {  
-  /* -ms-transform: scale(1.5); /* IE 9 */
-  /* -webkit-transform: scale(1.5); /* Safari 3-8 */
-  /* transform: scale(1.1);     */
-   /* IE 9 */
-   opacity: 1;
-   transform: translate(25px, 50px);
-   background-image: none;
-   background-color: yellow;
-   z-index: 1;
-
+.flex-container {
+	/* background-color: #eee; */
+	width: 100vw;	
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	flex-direction: flex-start;
+   
 }
 
-
-.product-details {
+.product2 {
 	position: relative;
-	text-align: left;
-	overflow: hidden;
-	padding: 30px;
-	height: 100%;
-	float: left;
-	width: 70%;
+	max-width: 360px;
+	margin: 20px;
+ border:2px solid rgba(180,180,180,0.4); 
+ border-radius: 5px; 
+ background-color:#f5f5f5;
+	height: auto;
+	/* background-color: #fff;
+   */
+}
+
+/*.product2:hover {	 
+	 box-shadow: 0px 15px 11px -10px rgba(0,0,0,0.2);  
+   background-color: hsla(0, 0%, 0%, 0.6);   
+}*/
+
+.product-title  {
+	/* padding: 1em; */
+	/* margin: 0; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+  padding: .8rem 0rem .7rem 6rem;
+  z-index: 2;
+  position: relative;
+  /* text-transform: uppercase; */
+  color: black;
+  font-weight: bolder;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 2px hsla(0, 0%, 100%, .5);
+  text-decoration: none;
+  font-family: 'Open Sans';
+  background-color:white;
 
 }
 
-#container .product-details h1{
-	font-family: 'Bebas Neue', cursive;
-	display: inline-block;
-	position: absolute;
-  top: 2;
-  left: 5em;
-	font-size: 30px;
-	color:black;
+.product-text {
+	padding: 0 1em;
+  font-size: 16px;
+  margin-top: 1rem;
+  letter-spacing: 0.1px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.35);
+  /* height: 4rem; */
+}
+
+img {
 	margin: 0;
-	
+	max-width: 100%;
 }
 
-#container .product-details h1:before{
-	position: absolute;
-	content: '';
-	right: 0%; 
-	top: 0%;
-	transform: translate(25px, -15px);
-	font-family: 'Bree Serif', serif;
-	display: inline-block;
-	background: #ffe6e6;
-	border-radius: 5px;
-	font-size: 14px;
-	padding: 5px;
-	color: white;
-	margin: 0;
-	animation: chan-sh 6s ease infinite;
+/* button {
+	position: relative;
+	width: 80%;
+	margin: 1em 10%;
+	padding: 12px 24px;
+ 
+	color: rgb(255, 255, 255);
+	border: none;
+} */
 
-}
-
-
-.hint-star {
-	display: inline-block;
-	margin-left: 0.5em;
-  margin-top: 1.5em;
-	color: rgba(255, 217, 0, 0.562);
-	width: 70%;
-}
-
-
-#container .product-details > p {
-font-family: 'EB Garamond', serif;
-	text-align: center;
-	font-size: 18px;
-	color: #7d7d7d;
-	
-}
-.control{
-	position: absolute;
-	bottom:0%;
-	left: 22.8%;
-	
-}
+  /* button:hover {
+   top: -1px; 
+  box-shadow: 0px 15px 11px -10px rgba(0,0,0,0.2);  
+	cursor: pointer;
+} */
+   
+ 
+/*___________________________________________________________ */
+ 
 .btn {
-
 	transform: translateY(0px);
-	transition: 0.3s linear;
-	background:  #c0392b;
+	transition: 0.5s linear ;
+	background:  #c03a2be0;
 	border-radius: 5px;
   position: relative;
   overflow: hidden;
 	cursor: pointer;
 	outline: none;
 	border: none;
-	color: #eee;
+  color: #eee;  
 	padding: 0;
-	margin :0;
-	
+	margin: 0 19px;
+  position: relative;
+	width: 80%;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+	/* color: rgb(255, 255, 255); */
+	border: none;
 }
 
-.btn:hover{transform: translateY(-6px);
-	background: #c0392b;}
+/* .btn:hover{transform: translateY(-1px);
+	background: #c03a2be0;} */
 
 .btn span {
-	font-family: 'Farsan', cursive;
-	transition: transform 0.3s;
+ 	transition: transform 0.3s;
 	display: inline-block;
-  padding: 7px 20px;
-	font-size: 1.2em;
- 
+  padding: 6px 26px;
+	font-size: 1.1em;
+	margin:0;
 	
 }
 .btn .price, .shopping-cart{
 	background: #333;
 	border: 0;
 	margin: 0;
-  
-
 }
+ 
 
 .btn .price {
-	transform: translateX(-10%);
-   padding-right: 15px;
+	transform: translateX(-10%); 
+  padding-right: 30px;
 }
 
 .btn .shopping-cart {
@@ -336,26 +225,12 @@ font-family: 'EB Garamond', serif;
   left: 0;
   top: 0;
 }
+.shopping-cart{color: white;}
 
-.btn .buy {z-index: 3; font-weight: 300;}
+.btn .buy {z-index: 3; font-weight: bold;}
 
-.btn:hover .price {transform: translateX(-110%);}
+ .btn:hover .price {transform: translateX(-110%);}  
 
 .btn:hover .shopping-cart {transform: translateX(0%);}
-
-
-
-/* .product-image {
-	transition: all 0.3s ease-out;
-	display: inline-block;
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-	float: right;
-	width: 45%;
-	display: inline-block;
-}
-
-#container img {width: 100%;height: 100%;} */
 
  
