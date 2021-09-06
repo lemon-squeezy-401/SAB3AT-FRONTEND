@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import cookie from 'react-cookies';
 import base64 from 'base-64';
 import jwt from 'jsonwebtoken';
@@ -12,60 +12,65 @@ function AuthSettings(props) {
   const [user, setUser] = useState({});
   const [token, setToken] = useState(null);
   const [capabilities, setCapabilities] = useState(null);
-
+  
   useEffect(() => {
     const token = cookie.load('auth');
     const acl = cookie.load('acl');
     setCapabilities(acl);
     validToken(token);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function setLoginState(loggedIn, token, user) {
     cookie.save('auth', token);
     setLoggedIn(loggedIn);
     setUser(user);
     setToken(token);
-  };
+  }
 
   function validToken(token) {
-    if(token !== 'null' && token !== undefined){
+    if (token !== 'null' && token !== undefined) {
       const user = jwt.decode(token);
       // console.log(user);
       setLoginState(true, token, user);
-    } else if(token === 'null') {
+    } else if (token === 'null') {
       setLoginState(false, null, {});
     }
-  };
+  }
 
   async function login(email, password) {
     try {
-      const response = await superagent.post(`${API}/signin`)
+      const response = await superagent
+        .post(`${API}/signin`)
         .set('authorization', `Basic ${base64.encode(`${email}:${password}`)}`);
       const acl = response.body.user.capabilities;
       cookie.save('acl', acl);
       setCapabilities(acl);
       validToken(response.body.token);
-      console.log(response.body.user.id);
+      // setUserId(response.body.user._id);
+      console.log(
+        'this response body user from auth context =P',
+        response.body.user._id
+      );
     } catch (error) {
       console.error('Login Error', error.message);
     }
-  };
+  }
 
   function logout() {
     setLoginState(false, null, {});
     cookie.remove('auth');
     cookie.remove('acl');
     setCapabilities(null);
-  };
+  }
 
-  async function signup(username, password, email, role){
+  async function signup(username, password, email, role) {
     try {
       const user = {
         username,
         password,
         email,
-        role
+        role,
       };
       const response = await superagent.post(`${API}/signup`, user);
       validToken(response.body.user.token);
@@ -75,7 +80,18 @@ function AuthSettings(props) {
   }
 
   return (
-    <AuthContext.Provider value = {{ loggedIn, user, token, capabilities, login: login, logout: logout, signup: signup }}>
+    <AuthContext.Provider
+      value={{
+        loggedIn,
+        user,
+        token,
+        capabilities,
+        login: login,
+        logout: logout,
+        signup: signup,
+        // userId,
+      }}
+    >
       {props.children}
     </AuthContext.Provider>
   );
