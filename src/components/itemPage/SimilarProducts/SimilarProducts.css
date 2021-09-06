@@ -1,5 +1,5 @@
 .movie-similar {
-  margin: 2% 6%;
+  margin: 7% 6%;
 }
 .section-header {
   position: relative;
@@ -13,7 +13,7 @@
 }
 
 .section-header::after {
-  content: "...";
+  content: '...';
   position: relative;
   top: -5px;
   left: 9px;
@@ -23,7 +23,7 @@
   color: #cc364e;
 }
 .section-header::before {
-  content: "...";
+  content: '...';
   position: relative;
   top: -4px;
   left: -9px;
@@ -35,7 +35,8 @@
 
 .movies-suf {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: center;
 }
 .movie-card {
   width: 265px;

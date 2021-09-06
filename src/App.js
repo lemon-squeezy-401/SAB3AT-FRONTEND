@@ -19,7 +19,7 @@ import SignUp from './components/auth/signup/SignUp';
 import AuthContext from './context/authContext';
 import NavContext from './context/navContext';
 import CommentsProvider from './context/commentsContext';
-import AllUsersProvider from './context/allUsersContext';
+import ServicesProvider from './context/AllServices';
 //-------------------------------------------//
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
       <Router>
         <AuthContext>
           <NavContext>
-            <AllUsersProvider>
+            <ServicesProvider>
               <CommentsProvider>
                 <Navbar />
                 <Switch>
@@ -48,15 +48,18 @@ function App() {
                   <Route exact path="/dashboard">
                     <Profile />
                   </Route>
+
                   <Route exact path="/products">
                     <ProductCards />
                   </Route>
                   <Route exact path="/ProductDetails">
                     <ProductDetails />
                   </Route>
+
                   <Route exact path="/services">
                     <ServiceCards />
                   </Route>
+
                   <Route exact path="/ServiceDetails">
                     <ServiceDetails />
                   </Route>
@@ -76,7 +79,7 @@ function App() {
                 </Switch>
                 <Footer />
               </CommentsProvider>
-            </AllUsersProvider>
+            </ServicesProvider>
           </NavContext>
         </AuthContext>
       </Router>

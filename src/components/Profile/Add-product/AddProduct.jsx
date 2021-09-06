@@ -9,7 +9,7 @@ function AddProduct() {
   console.log('this auth setting log from add product code =G',authSettings);
 
   const {user} = authSettings
-  console.log('log only user from add product extracted from auth consext',user);
+  console.log('log authSettings from add product extracted from auth consext',authSettings);
 
   const [title, setTitle] = useState('');
   const [SKU, setSKU] = useState('');

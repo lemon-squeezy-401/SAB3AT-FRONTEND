@@ -1,28 +1,33 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-import { AllUsersContext } from './allUsersContext';
+import { AuthContext } from './authContext';
+import { ServicesContext } from './AllServices';
 export const CommentsContext = React.createContext();
-
 function CommentsProvider(props) {
-  const { usersList, setUsersList, getAllUsers } = useContext(AllUsersContext);
+  const { user } = useContext(AuthContext);
+  const { services, getServices } = useContext(ServicesContext);
+  getServices();
+  console.log('log services from comment context', services);
 
   const [comment, setComment] = useState({
     text: '',
     commenterId: '',
+    serivceId: '',
   });
   const [userId, setUserId] = useState('');
-  const [serivceId, setSerivceId] = useState('');
+
   const API = 'https://sab3at.herokuapp.com';
 
   const addComment = async (event) => {
     event.preventDefault();
-    getAllUsers();
-    console.log('userlist logged from comment context', usersList);
 
     const data = {
-      comment: { text: event.target.value, commenterId : comment.commenterId},
-      userId,
-      serivceId,
+      userId, //this id for the service owner
+      comment: {
+        text: event.target.value,
+        commenterId: user.id,
+        serivceId: comment.serivceId,
+      },
     };
 
     const response = await axios.post(`${API}/service`, data);
@@ -37,8 +42,6 @@ function CommentsProvider(props) {
         setComment,
         userId,
         setUserId,
-        serivceId,
-        setSerivceId,
         addComment,
       }}
     >
@@ -48,19 +51,3 @@ function CommentsProvider(props) {
 }
 
 export default CommentsProvider;
-
-// const deleteComment = async (id) => {
-//   const request = await axios.delete(`${API}/service/:${id}`);
-
-//   setComment(request.data);
-// };
-
-// const updateCommentState = (e) => setComment({});
-
-// const updateComment = async (e) => {
-//   e.preventDefault();
-
-//   const request = await axios.put(`${API}/service/:${userId}`, {});
-
-//   setComment(request.data);
-// };

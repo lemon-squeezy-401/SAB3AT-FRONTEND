@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SimilarProducts from './SimilarProducts/SimilarProducts';
 import CommentsSection from './CommentsSection/CommentsSection';
 import './itemPage.css';
 import img from './cardImg.PNG';
+
+// import { ServicesContext } from '../../context/AllServices';
+import { CommentsContext } from '../../context/commentsContext';
 function ItemPage() {
+  // const { services, getServices } = useContext(ServicesContext);
+  // getServices();
+
+  const commentsContext = useContext(CommentsContext);
+  const { addComment } = commentsContext;
   return (
     <>
+      {/* {console.log('log services from item page', services)} */}
       <div classNameName="product-html">
         <div classNameName="product-body">
           <main className="container">
