@@ -3,7 +3,7 @@ import { If, Then, Else } from 'react-if';
 import { AuthContext } from '../../context/authContext';
 import { NavContext } from '../../context/navContext';
 import './navbar.css';
-
+import logo from '../../assets/logo.png';
 // style
 import cartIcon from '../../assets/cart.svg';
 import listIcon from '../../assets/list.svg';
@@ -33,7 +33,7 @@ function Nanbar() {
     <div id='con' className='navbar-body'>
       <nav className={navbar ? 'nav1 active-nav' : 'nav1'}>
         <div className="nav-container1">
-          <h1 className="nav-logo"><a href="/">$SAB3AT$</a></h1>
+          <h1 className="nav-logo"><a href="/"><img src={logo} width='180px' height='50px' /></a></h1>
           <If condition={!authSettings.loggedIn}>
             <Then>
               <ul className='navbar-ul'>
