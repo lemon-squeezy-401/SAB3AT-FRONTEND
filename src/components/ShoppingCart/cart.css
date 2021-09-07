@@ -504,3 +504,17 @@
   margin-right: auto !important;
   margin-left: auto !important;
 }
+
+#root > section.shopping-cart.dark > div > div > div > div.col-md-12.col-lg-8 {
+  color: black;
+}
+
+#root
+  > section.shopping-cart.dark
+  > div
+  > div
+  > div
+  > div.col-md-12.col-lg-4
+  > div {
+  color: black;
+}

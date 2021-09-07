@@ -1,12 +1,12 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 :root {
-  --df_color:rgba(255, 0, 0, 0.699);
+  --df_color: rgba(255, 0, 0, 0.699);
 }
 .footer-body {
   padding: 60px 0;
   padding-bottom: 1.1rem;
-  /* position: relative; */
-  /* bottom: 0; */
+  position: relative;
+  bottom: 0;
   width: 100%;
   margin-top: 35rem;
 }
@@ -25,10 +25,10 @@ section .section-title {
   /* height: 300px  ; */
   padding-bottom: 6px;
   margin-bottom: 20px;
-  color: var(--df_color) ;
+  color: var(--df_color);
 }
 
-.footer-h5{
+.footer-h5 {
   border-left: 3px solid rgba(255, 0, 0, 0.699);
   border-right: 3px solid rgba(255, 0, 0, 0.699);
 }

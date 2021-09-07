@@ -1,17 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import SimilarProducts from './SimilarProducts/SimilarProducts';
 import CommentsSection from './CommentsSection/CommentsSection';
 import './itemPage.css';
 import img from './cardImg.PNG';
 
-// import { ServicesContext } from '../../context/AllServices';
-import { CommentsContext } from '../../context/commentsContext';
-function ItemPage() {
-  // const { services, getServices } = useContext(ServicesContext);
-  // getServices();
+function ItemPage(props) {
+  const [services, setServices] = useState([]);
+  let history = useHistory();
 
-  const commentsContext = useContext(CommentsContext);
-  const { addComment } = commentsContext;
+  const {
+    serviceId,
+    serviceTitle,
+    serviceDescription,
+    servicePrice,
+    serviceComments,
+  } = history.location.state;
+
+ 
   return (
     <>
       {/* {console.log('log services from item page', services)} */}
@@ -40,93 +47,33 @@ function ItemPage() {
             {/* <!-- Right Column --> */}
             <div className="right-column">
               {/* <!-- Product Description --> */}
-              <div className="product-description">
-                <span>Headphones</span>
-                <h1>Beats EP</h1>
-                <p>
-                  The preferred choice of a vast range of acclaimed DJs. Punchy,
-                  bass-focused sound and high isolation. Sturdy headband and
-                  on-ear cushions suitable for live performance
-                </p>
-              </div>
-
-              {/* <!-- Product Configuration --> */}
-              <div className="product-configuration">
-                {/* <!-- Product Color --> */}
-                <div className="product-color">
-                  <span>Color</span>
-
-                  <div className="color-choose">
-                    <div>
-                      <input
-                        data-image="red"
-                        type="radio"
-                        id="red"
-                        name="color"
-                        value="red"
-                        checked
-                      />
-                      <label for="red">
-                        <span></span>
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        data-image="blue"
-                        type="radio"
-                        id="blue"
-                        name="color"
-                        value="blue"
-                      />
-                      <label for="blue">
-                        <span></span>
-                      </label>
-                    </div>
-                    <div>
-                      
-                      <input
-                        data-image="black"
-                        type="radio"
-                        id="black"
-                        name="color"
-                        value="black"
-                      />
-                      <label for="black">
-                        <span></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                {/* <!-- Cable Configuration --> */}
-                <div className="cable-config">
-                  <span>Cable configuration</span>
-
-                  <div className="cable-choose">
-                    <button>Straight</button>
-                    <button>Coiled</button>
-                    <button>Long-coiled</button>
-                  </div>
-
-                  <a href={'/#'}>How to configurate your headphones</a>
-                </div>
+              <div
+                className="product-description"
+                style={{ marginBottom: '5rem' }}
+              >
+                <span>Services</span>
+                <h1>{serviceTitle}</h1>
+                <p>{serviceDescription}</p>
               </div>
 
               {/* <!-- Product Pricing --> */}
               <div className="product-price">
-                <span>148$</span>
+                <span>{servicePrice}$</span>
                 <a href={'/#'} className="cart-btn">
                   Add to cart
                 </a>
               </div>
             </div>
           </main>
-          <div style={{ margin: '5rem' }}></div>
+          <div style={{ margin: '10rem' }}></div>
         </div>
       </div>
       <SimilarProducts />
 
-      <CommentsSection />
+      <CommentsSection
+        serviceComments={serviceComments}
+        serviceId={serviceId}
+      />
     </>
   );
 }

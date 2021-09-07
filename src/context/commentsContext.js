@@ -5,8 +5,7 @@ import { ServicesContext } from './AllServices';
 export const CommentsContext = React.createContext();
 function CommentsProvider(props) {
   const { user } = useContext(AuthContext);
-  const { services, getServices } = useContext(ServicesContext);
-  getServices();
+  const { services } = useContext(ServicesContext);
   console.log('log services from comment context', services);
 
   const [comment, setComment] = useState({
