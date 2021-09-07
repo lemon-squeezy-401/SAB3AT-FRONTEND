@@ -1,11 +1,12 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 //----------------Components--------------------//
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Login from './components/auth/Login/Login';
 import Profile from './components/Profile/Profile';
-import AboutUS from './components/AboutUs/AboutUs';
+import AboutUs from './components/AboutUs/AboutUs';
 import LandingPage from './components/Landing-page/LandingPage';
 import ProductCards from './components/ProductPage/ProductCards/ProductCards';
 import ProductDetails from './components/ProductPage/ProductDetails/ProductDetails';
@@ -18,19 +19,24 @@ import Cart from './components/ShoppingCart/ShoppingCart';
 import SignIn from './components/auth/signin/SignIn';
 import SignUp from './components/auth/signup/SignUp';
 //-----------------Contexts-----------------//
-import AuthContext from './context/authContext';
+// import AuthContext from './context/authContext';
 import NavContext from './context/navContext';
-// import CommentsProvider from './context/commentsContext';
-// import ServicesProvider from './context/AllServices';
+import CommentsProvider from './context/commentsContext';
+import ServicesProvider from './context/AllServices';
 //-------------------------------------------//
+
+import { AuthContext } from '../src/context/authContext';
+
+//--------------------------------------------//
 function App() {
+  const { user } = useContext(AuthContext);
+  console.log(user.id);
   return (
     <>
       <Router>
-        <AuthContext>
-          <NavContext>
-            {/* <ServicesProvider>
-              <CommentsProvider> */}
+        <NavContext>
+          <ServicesProvider>
+            {/* <CommentsProvider> */}
             <Navbar />
             <Switch>
               <Route exact path="/">
@@ -72,23 +78,21 @@ function App() {
                 <Cart />
               </Route>
               <Route exact path="/about">
-                <AboutUS />
+                <AboutUs />
               </Route>
-
               <Route
                 path="/admin"
                 component={() => {
-                  window.location.href = 'http://localhost:3001';
+                  window.location.href = `http://localhost:3001?q=${user.id}`; //token should pass as param and (usequiry)* or useparams
                   return null;
                 }}
               />
             </Switch>
             <Footer />
-            {/* </CommentsProvider>
-        </ServicesProvider> */}
-          </NavContext>
-        </AuthContext>
-      </Router >
+            {/* </CommentsProvider> */}
+          </ServicesProvider>
+        </NavContext>
+      </Router>
     </>
   );
 }
