@@ -39,10 +39,11 @@ function AddService() {
     // console.log(isAvailable);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event, _id) => {
     try {
       event.preventDefault();
       const data = {
+        _id: _id,
         title: title,
         SKU: SKU,
         price: price,

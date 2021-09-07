@@ -6,7 +6,7 @@ import './addproduct.css';
 function AddProduct() {
   const API = 'https://sab3at.herokuapp.com';
   const authSettings = useContext(AuthContext);
-  console.log('this auth setting log from add product code =G',authSettings);
+  // console.log('this auth setting log from add product code =G',authSettings);
   // console.log(authSettings);
 
   const [title, setTitle] = useState('');
