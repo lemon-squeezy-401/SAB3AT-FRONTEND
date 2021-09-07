@@ -14,6 +14,7 @@ import ServiceCards from './components/ServicePage/ServiceCards/ServiceCards.js'
 import ServiceDetails from './components/ServicePage/ServiceDetails/ServiceDetails';
 import ItemPage from './components/itemPage/ItemPage';
 import Cart from './components/ShoppingCart/ShoppingCart';
+// import EditContext from './context/editcontext';
 
 
 import SignIn from './components/auth/signin/SignIn';
@@ -21,7 +22,7 @@ import SignUp from './components/auth/signup/SignUp';
 //-----------------Contexts-----------------//
 // import AuthContext from './context/authContext';
 import NavContext from './context/navContext';
-import CommentsProvider from './context/commentsContext';
+// import CommentsProvider from './context/commentsContext';
 import ServicesProvider from './context/AllServices';
 //-------------------------------------------//
 
