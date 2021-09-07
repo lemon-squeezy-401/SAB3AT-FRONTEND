@@ -5,7 +5,7 @@ import './Footer.css';
 
 function Footer() {
   return (
-    <section id='footer' className = 'footer-body'>
+    <section id='footer' className='footer-body'>
       <div className='footer-container'>
         <div className='row text-center text-xs-center text-sm-left text-md-left'>
 
@@ -21,7 +21,7 @@ function Footer() {
           </div>
 
           <div className='col-xs-12 col-sm-4 col-md-4 myColor'>
-            <h5 className = 'footer-h5'>About Us</h5>
+            <h5 className='footer-h5'>About Us</h5>
             <ul className='list-unstyled quick-links '>
               <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation '></i>Home</a></li>
               <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>About</a></li>

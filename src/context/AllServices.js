@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 export const ServicesContext = React.createContext();
@@ -30,5 +31,4 @@ function ServicesProvider(props) {
     </ServicesContext.Provider>
   );
 }
-
 export default ServicesProvider;

@@ -11,12 +11,7 @@ export class ProductCard extends React.Component {
     return (
       <div className="customized1">
         <head>
-          {/* <meta charset="UTF-8" />
-          <meta content="width=device-width, initial-scale=1.0" />
-          <meta http-equiv="X-UA-Compatible" content="ie=edge" /> */}
-          {/* <title>Nike Shoes Shopping Card</title> */}
-          {/* <link rel="stylesheet" href={"style.css"} />
-                    <link rel="stylesheet" href={"https://use.fontawesome.com/releases/v5.6.1/css/all.css"} /> */}
+
         </head>
         <body>
           <section className="card-Container1">
@@ -40,10 +35,7 @@ export class ProductCard extends React.Component {
                     {' '}
                     More Info..
                   </a>
-                  {/* <a href={"/"}><i className="fas more_info"></i> More Info..</a><img src={more} alt="any" /> */}
-                  {/* <button type="submit" className="fas" ><i > </i>  More Info..</button> */}
 
-                  {/* <Button className="more_info" variant="outline-Dark">More Info..</Button>{' '} */}
                 </span>
 
                 <span className="back_text1">FAST</span>
