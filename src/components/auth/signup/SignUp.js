@@ -39,7 +39,7 @@ function SignUp() {
           <form onSubmit={handleSignup}>
             <input
               type="text"
-              name="username"
+              name="firstName"
               placeholder="Username"
               onChange={handleUsername}
             />

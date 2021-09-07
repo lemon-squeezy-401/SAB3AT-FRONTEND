@@ -2,7 +2,12 @@ import React from 'react';
 import './CommentsSection.css';
 import AddComment from '../AddComment/AddComment';
 
-function CommentsSection() {
+function CommentsSection(props) {
+  console.log('props from comment section component', props);
+  const { serviceComments, serviceId } = props;
+
+
+  
   return (
     <>
       <div className="comments-container mt-5">
@@ -33,7 +38,7 @@ function CommentsSection() {
                     src={'https://i.imgur.com/hczKIze.jpg'}
                     width="30"
                     className="user-img rounded-circle mr-2"
-                    alt=''
+                    alt=""
                   />
                   <span>
                     <small className="font-weight-bold text-primary">
@@ -65,7 +70,7 @@ function CommentsSection() {
                     src={'https://i.imgur.com/C4egmYM.jpg'}
                     width="30"
                     className="user-img rounded-circle mr-2"
-                    alt=''
+                    alt=""
                   />
                   <span>
                     <small className="font-weight-bold text-primary">
@@ -96,7 +101,7 @@ function CommentsSection() {
                     src={'https://i.imgur.com/0LKZQYM.jpg'}
                     width="30"
                     className="user-img rounded-circle mr-2"
-                    alt=''
+                    alt=""
                   />
                   <span>
                     <small className="font-weight-bold text-primary">
@@ -129,7 +134,7 @@ function CommentsSection() {
                     src={'https://i.imgur.com/ZSkeqnd.jpg'}
                     width="30"
                     className="user-img rounded-circle mr-2"
-                    alt=''
+                    alt=""
                   />
                   <span>
                     <small className="font-weight-bold text-primary">

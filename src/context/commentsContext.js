@@ -5,10 +5,8 @@
 // export const CommentsContext = React.createContext();
 // function CommentsProvider(props) {
 //   const { user } = useContext(AuthContext);
-//   const { services, getServices } = useContext(ServicesContext);
-//   getServices();
-//   // console.log('log services from comment context', services);
-
+//   const { services } = useContext(ServicesContext);
+//   console.log('log services from comment context', services);
 //   const [comment, setComment] = useState({
 //     text: '',
 //     commenterId: '',
@@ -51,3 +49,4 @@
 // }
 
 // export default CommentsProvider;
+

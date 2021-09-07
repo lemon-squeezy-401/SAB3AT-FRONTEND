@@ -1,19 +1,31 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 import './cart.css';
 import SimilarProducts from '../itemPage/SimilarProducts/SimilarProducts';
 function Cart() {
+  let history = useHistory();
+
+  const {
+    serviceId,
+    serviceTitle,
+    serviceDescription,
+    servicePrice,
+    serviceComments,
+  } = history.location.state;
   return (
     <>
       <section className="shopping-cart dark">
         <div className="container">
+          {/* <div> */}
           <div className="content">
             <div className="row">
               <div className="col-md-12 col-lg-8">
                 <div className="items">
-                  <div className="product">
+                  {/* //-------------use this div to map --------------------*/}
+                  <div className="product" key={serviceId}>
                     <div className="row">
                       <div className="col-md-3">
-                        {/* //-------------use this div to map --------------------*/}
                         <img
                           className="img-fluid mx-auto d-block image"
                           src={
@@ -27,18 +39,18 @@ function Cart() {
                           <div className="row">
                             <div className="col-md-5 product-name">
                               <div className="product-name">
-                                <a href="/#">Lorem Ipsum dolor</a>
+                                <a href="/#">{serviceTitle}</a>
                                 <div className="product-info">
                                   <div>
-                                    Display:{' '}
-                                    <span className="value">5 inch</span>
+                                    {serviceDescription}
+                                    <span className="value"></span>
                                   </div>
-                                  <div>
+                                  {/* <div>
                                     RAM: <span className="value">4GB</span>
                                   </div>
                                   <div>
                                     Memory: <span className="value">32GB</span>
-                                  </div>
+                                  </div> */}
                                 </div>
                               </div>
                             </div>
@@ -52,14 +64,15 @@ function Cart() {
                               />
                             </div>
                             <div className="col-md-3 price">
-                              <span>$120</span>
+                              <span>${servicePrice}</span>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="product">
+                  {/* //-------------------------// */}
+                  {/* <div className="product">
                     <div className="row">
                       <div className="col-md-3">
                         <img
@@ -154,7 +167,7 @@ function Cart() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="col-md-12 col-lg-4">
