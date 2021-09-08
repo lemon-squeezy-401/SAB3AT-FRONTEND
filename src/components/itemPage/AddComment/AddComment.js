@@ -13,10 +13,10 @@ function AddComment() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = {
-      userId: '612e662b580fd40c5d623ada',
+      userId: '6138dfbc0587ec00163423da',
       comment: {
         text: text,
-        serivceId: '6137dc093be6150016097495',
+        serivceId: '6138e1d40587ec00163423ed',
       },
     };
     await axios.post(`https://sab3at.herokuapp.com/service`, data);
