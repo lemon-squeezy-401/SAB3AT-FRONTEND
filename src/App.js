@@ -13,15 +13,12 @@ import ServiceCards from './components/ServicePage/ServiceCards/ServiceCards.js'
 import ServiceDetails from './components/ServicePage/ServiceDetails/ServiceDetails';
 import ItemPage from './components/itemPage/ItemPage';
 import Cart from './components/ShoppingCart/ShoppingCart';
-// import EditContext from './context/editcontext';
 
 
 import SignIn from './components/auth/signin/SignIn';
 import SignUp from './components/auth/signup/SignUp';
 //-----------------Contexts-----------------//
-// import AuthContext from './context/authContext';
 import NavContext from './context/navContext';
-// import CommentsProvider from './context/commentsContext';
 import ServicesProvider from './context/AllServices';
 import ProductsProvider from './context/AllProducts';
 //-------------------------------------------//
@@ -36,14 +33,12 @@ function App() {
     document.title = `SAB3AT${' '}$`;
   }, []);
 
-  // console.log(user.id);
   return (
     <>
       <Router>
         <NavContext>
           <ServicesProvider>
             <ProductsProvider>
-              {/* <CommentsProvider> */}
               <Navbar />
               <Switch>
                 <Route exact path="/">
@@ -94,9 +89,15 @@ function App() {
                     return null;
                   }}
                 />
+                <Route
+                  path="/payment"
+                  component={() => {
+                    window.location.href = `https://sab3at.herokuapp.com/payment`; //token should pass as param and (usequiry)* or useparams
+                    return null;
+                  }}
+                />
               </Switch>
               <Footer />
-              {/* </CommentsProvider> */}
             </ProductsProvider>
           </ServicesProvider>
         </NavContext>
