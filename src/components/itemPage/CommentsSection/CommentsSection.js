@@ -1,19 +1,18 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import './CommentsSection.css';
 import AddComment from '../AddComment/AddComment';
-import { AuthContext } from '../../../context/authContext';
 import { ServicesContext } from '../../../context/AllServices';
 
 function CommentsSection(props) {
   const { services } = useContext(ServicesContext);
 
-  console.log(services);
+  // console.log(services);
   let arr = [];
   services.forEach((service) =>
     service.comments.forEach((comment) => arr.push(comment))
   );
 
-  console.log('trrrrrrrrrrrrrrrrrrrrrrrrrra', arr);
+  // console.log('trrrrrrrrrrrrrrrrrrrrrrrrrra', arr);
 
   return (
     <>

@@ -18,7 +18,7 @@ function ServicesProvider(props) {
       user.services.forEach((service) => arr.push(service))
     );
     setServices(arr);
-    console.log('arr from all service context', arr);
+    // console.log('arr from all service context', arr);
   };
 
   useEffect(() => {

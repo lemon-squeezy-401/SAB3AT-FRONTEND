@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
@@ -8,10 +8,10 @@ import './itemPage.css';
 import img from './cardImg.PNG';
 
 function ItemPage(props) {
-  const [services, setServices] = useState([]);
+  // const [services, setServices] = useState([]);
 
   let history = useHistory();
-  console.log(history.location.state);
+  // console.log(history.location.state);
   const {
     serviceId,
     serviceTitle,

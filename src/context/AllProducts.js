@@ -17,7 +17,7 @@ function ProductsProvider(props) {
       user.products.forEach((product) => arr.push(product))
     );
     setProducts(arr);
-    console.log('arr from all Products context', arr);
+    // console.log('arr from all Products context', arr);
   };
 
   useEffect(() => {
