@@ -1,5 +1,15 @@
 import React, { useContext } from 'react';
-import { Container, Typography, Grid, Card, CardMedia, CardContent, CardActions, Button, makeStyles} from '@material-ui/core/';
+import {
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Button,
+  makeStyles,
+} from '@material-ui/core/';
 import { ProductsContext } from '../../../context/AllProducts';
 import { Link } from 'react-router-dom';
 // import './ProductCards.css';
@@ -28,7 +38,6 @@ function ProductCard() {
   const { products } = useContext(ProductsContext);
   const classes = useStyles();
 
-
   let cartArray = [];
   // console.log('log cartArray from service cards page', cartArray);
   // console.log('log services from service cards page', services);
@@ -53,7 +62,7 @@ function ProductCard() {
                 </CardContent>
                 <CardActions>
                   <Link
-                    style = {{textDecoration: 'none'}}
+                    style={{ textDecoration: 'none' }}
                     to={{
                       pathname: '/cart',
                       state: {
@@ -61,12 +70,17 @@ function ProductCard() {
                         serviceTitle: `${product.title}`,
                         serviceDescription: `${product.description}`,
                         servicePrice: `${product.price}`,
+                        serviceImg: `${product.image}`,
                         serviceComments: [`${product.comments}`],
                       },
                     }}
                   >
                     <Button
-                      style = {{borderRadius: '5px', backgroundColor: '#0275d8', color: '#fff'}}
+                      style={{
+                        borderRadius: '5px',
+                        backgroundColor: '#0275d8',
+                        color: '#fff',
+                      }}
                       size="small"
                       onClick={() => cartArray.push(product)}
                     >
@@ -74,7 +88,7 @@ function ProductCard() {
                     </Button>
                   </Link>
                   <Link
-                    style = {{textDecoration: 'none'}}
+                    style={{ textDecoration: 'none' }}
                     to={{
                       pathname: '/item',
                       state: {
@@ -82,12 +96,17 @@ function ProductCard() {
                         serviceTitle: `${product.title}`,
                         serviceDescription: `${product.description}`,
                         servicePrice: `${product.price}`,
+                        serviceImg: `${product.image}`,
                         serviceComments: [`${product.comments}`],
                       },
                     }}
                   >
                     <Button
-                      style = {{borderRadius: '5px', backgroundColor: '#0275d8', color: '#fff'}}
+                      style={{
+                        borderRadius: '5px',
+                        backgroundColor: '#0275d8',
+                        color: '#fff',
+                      }}
                       size="small"
                     >
                       VIEW DETAILS
@@ -104,4 +123,3 @@ function ProductCard() {
 }
 
 export default ProductCard;
-
