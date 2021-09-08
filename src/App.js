@@ -85,7 +85,7 @@ function App() {
                 <Route
                   path="/admin"
                   component={() => {
-                    window.location.href = `http://localhost:3001?q=${user.id}`; //token should pass as param and (usequiry)* or useparams
+                    window.location.href = `https://sab3at-dashboard.netlify.app/?q=${user.id}`; //token should pass as param and (usequiry)* or useparams
                     return null;
                   }}
                 />
