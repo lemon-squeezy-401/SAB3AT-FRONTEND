@@ -2,13 +2,19 @@
 :root {
   --df_color: rgba(255, 0, 0, 0.699);
 }
+
+/* * {
+  margin: 0;
+  box-sizing: border-box;
+} */
+
 .footer-body {
   padding: 60px 0;
   padding-bottom: 1.1rem;
-  position: relative;
-  bottom: 0;
+  /* position: relative; */
+  /* bottom: 0; */
   width: 100%;
-  margin-top: 35rem;
+  margin-top: 20rem;
 }
 
 section .section-title {

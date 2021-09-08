@@ -12,7 +12,7 @@ function AuthSettings(props) {
   const [user, setUser] = useState({});
   const [token, setToken] = useState(null);
   const [capabilities, setCapabilities] = useState(null);
-  
+
   useEffect(() => {
     const token = cookie.load('auth');
     const acl = cookie.load('acl');

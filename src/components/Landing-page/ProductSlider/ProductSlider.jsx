@@ -41,7 +41,7 @@ export class Slider extends Component {
           </div>
 
 
-          {/* 
+          {/*
           <img src="https://image.shutterstock.com/image-photo/closeup-hand-young-asian-woman-600w-1932043229.jpg" alt='pic' />
             <img src="https://image.shutterstock.com/image-photo/closeup-hand-young-asian-woman-600w-1932043229.jpg" alt='pic' />
             <img src="https://image.shutterstock.com/image-photo/closeup-hand-young-asian-woman-600w-1932043229.jpg" alt='pic' />

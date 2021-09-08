@@ -11,7 +11,7 @@ function Cart() {
     serviceTitle,
     serviceDescription,
     servicePrice,
-    serviceComments,
+    // serviceComments,
   } = history.location.state;
   return (
     <>
