@@ -4,7 +4,6 @@ import { AuthContext } from '../../context/authContext';
 import { NavContext } from '../../context/navContext';
 import './navbar.css';
 import logo1 from '../../assets/logo1.png';
-import logo2 from '../../assets/logo2.png';
 
 // style
 import cartIcon from '../../assets/cart.svg';
@@ -35,7 +34,7 @@ function Nanbar() {
     <div id='con' className='navbar-body'>
       <nav className={navbar ? 'nav1 active-nav' : 'nav1'}>
         <div className="nav-container1">
-          <h1 className="nav-logo"><a href="/"><img src={logo1} width='160px' height='40px' /></a></h1>
+          <h1 className="nav-logo"><a href="/"><img src={logo1} width='160px' height='40px' alt='pic' /></a></h1>
           <If condition={!authSettings.loggedIn}>
             <Then>
               <ul className='navbar-ul'>
