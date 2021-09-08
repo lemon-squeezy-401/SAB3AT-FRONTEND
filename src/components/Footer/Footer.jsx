@@ -23,22 +23,22 @@ function Footer() {
           <div className='col-xs-12 col-sm-4 col-md-4 myColor'>
             <h5 className='footer-h5'>About Us</h5>
             <ul className='list-unstyled quick-links '>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation '></i>Home</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>About</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation1'></i>FAQ</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation2'></i>Get Started</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>Videos</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation1 '></i>Vision</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>Misssion</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation1'></i>Goals</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation1'></i>Plans</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation-s'></i>strategies</a></li>
             </ul>
           </div>
 
           <div className='col-xs-12 col-sm-4 col-md-4'>
             <h5>Contact US</h5>
             <ul className='list-unstyled quick-links'>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>Home</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>About</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation1'></i>FAQ</a></li>
-              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation2'></i>Get Started</a></li>
-              <li><a href='https://wwwe.sunlimetech.com' title='Design and developed by'><i className='fa fa-angle-double-right identation'></i>Imprint</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>Phone</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation1'></i>Fax</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation'></i>Email</a></li>
+              <li><a href='https://www.fiverr.com/share/qb8D02'><i className='fa fa-angle-double-right identation2'></i>Facebook</a></li>
+              <li><a href='https://wwwe.sunlimetech.com' title='Design and developed by'><i className='fa fa-angle-double-right identation'></i>Help</a></li>
             </ul>
           </div>
         </div>

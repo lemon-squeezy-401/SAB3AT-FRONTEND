@@ -110,7 +110,10 @@ display: flex;
 .identation2 {
   margin-left: 1rem;
 }
-
+ 
+.identation-s{
+  margin-left: .009rem;
+}
 .myColor {
   color: black !important;
 }

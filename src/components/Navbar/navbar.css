@@ -20,7 +20,7 @@
 
 .nav-logo{
   font-size: 32px;
-
+margin-top: -4px;
 }
 
 .nav1 {
@@ -103,7 +103,7 @@
   justify-content: space-between;
   align-items: center;
   /* padding: 17px 0; */
-  padding-top: 8.5px;
+  padding-top: 12px;
   padding-bottom: 8.5px;
   transition: all 0.3s ease-in-out;
 }

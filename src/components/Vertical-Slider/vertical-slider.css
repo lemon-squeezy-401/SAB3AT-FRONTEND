@@ -78,19 +78,28 @@
 .vertical-button:focus {
   outline: none;
 }
-
 .path {
   margin-top: 10px;
-  background-color: #222;
+  background-color: #fff;  
   border: none;
-  color: #fff;
+  color: #c0392b;
   cursor: pointer;
   font-size: 16px;
   padding: 15px;
+  border-radius: 50px;
+  font-weight: bolder;
+  letter-spacing:.6px;
+  /* border: 2px solid #c0392b; */
 }
 
 .path:hover {
-  color: #c0392b;
+  color:  #fff;
+ background :none ; 
+ background-color: #c0392b;  
+
+  border-radius: 50px;
+  font-weight: bolder;
+  letter-spacing:.8px;
 }
 
 .path:focus {
@@ -126,3 +135,22 @@
   background-image: url(https://static.independent.co.uk/2021/05/28/09/IndyBests%20top%20100%20products-1.jpg?width=982&height=726&auto=webp&quality=75);
   /* background-image: url('../../assets/back.png'); */
 }
+
+
+.icon1 {
+  margin-left:-3rem;
+  margin-right: -1.8rem;
+  margin-top: -1rem;
+}
+
+.slider-p1 {
+ padding-left: 0rem;
+ 
+}
+.slider-p2 {
+  padding-left: 3rem;
+ }
+
+/* .slider-p3 {
+  margin-left:7rem;
+} */
