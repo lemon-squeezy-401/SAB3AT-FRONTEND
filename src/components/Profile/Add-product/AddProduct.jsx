@@ -65,7 +65,7 @@ function AddProduct() {
       const id = authSettings.user.id;
       const response = await axios.post(`${API}/profile-product/${id}`, data);
       setProductsList([...productsList, response]);
-      console.log(productsList);
+      // console.log(productsList);
       // <Alert variant= 'dark'>your product was added to your procducts</Alert>;
     } catch (error) {
       console.error('Adding Error', error);

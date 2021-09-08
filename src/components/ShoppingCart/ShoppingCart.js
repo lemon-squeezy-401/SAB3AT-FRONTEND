@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
 import './cart.css';
 import SimilarProducts from '../itemPage/SimilarProducts/SimilarProducts';
-import axios from 'axios';
+
 function Cart() {
   let history = useHistory();
 
-  // let arr = [];
-
-  const localData = localStorage.getItem('cart');
-  const cartData = JSON.parse(localData);
-  // arr.push(cartData);
-
-  // console.log(arr);
+  // const localData = localStorage.getItem('cart');
+  // const cartData = JSON.parse(localData);
 
   const {
     serviceId,

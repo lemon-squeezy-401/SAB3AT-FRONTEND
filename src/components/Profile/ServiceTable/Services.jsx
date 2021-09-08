@@ -45,7 +45,7 @@ function Services() {
       };
       let response = await superagent.delete(`${API}/profile/${userId}`, data);
       response = servicesList.filter((product) => product._id !== _id);
-      console.log(response);
+      // console.log(response);
       setServicesList(response);
     } catch (error) {
       console.error('Delete Error', error);
@@ -83,7 +83,7 @@ function Services() {
   };
 
   const handleUpdate = async (event) => {
-    console.log(activeId);
+    // console.log(activeId);
     try {
       event.preventDefault();
       const id = authSettings.user.id;

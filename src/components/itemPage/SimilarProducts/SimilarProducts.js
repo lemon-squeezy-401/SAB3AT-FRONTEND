@@ -39,7 +39,6 @@ function SimilarProducts() {
               </div>
             );
           })}
-         
         </div>
       </section>
     </div>
