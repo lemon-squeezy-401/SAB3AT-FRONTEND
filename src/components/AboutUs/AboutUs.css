@@ -281,17 +281,7 @@ ul.social li a {
   --font-size-text-banner: 4.5rem;
   --font-size-logo: 2.7rem;
 }
-  
-/* *,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-} 
-  */
-   
+
   .aboutPic{
   /* background-image:linear-gradient(white,#c03a2bdc,  #c03a2bdc,white);  ;   */
   background-size: cover;  
