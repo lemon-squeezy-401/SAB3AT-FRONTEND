@@ -7,7 +7,7 @@ function Dashborad() {
   return (
     <div>
       <div className="profile-info">
-        <h1>username</h1>
+        <h1 className = 'profile-info-h1'>username</h1>
         <div className="profile-ul">
           <ul className = 'profile-info-ul'>
             <h5><img src={locationIcon} alt="location" /> Conutry</h5>

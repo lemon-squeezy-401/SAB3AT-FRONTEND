@@ -1,9 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../../context/authContext';
+import { useHistory } from 'react-router-dom';
 import './signin.css';
 
 function SignIn() {
   const authSettings = useContext(AuthContext);
+  const history = useHistory();
+
   /*==================Login===================== */
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,43 +22,52 @@ function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     authSettings.login(email, password);
+    const path = `/`;
+    history.push(path);
   };
   /*==================Login===================== */
+
   return (
     <>
       <div id="login-box">
-        <div class="left-signin">
-          <h1>Sign In</h1>
+        <div className="left-signin">
+          <h1 className = 'sign-h1'>Sign In</h1>
           <form onSubmit={handleSubmit}>
             <input
+              className = 'signinput'
               type="text"
               name="email"
               placeholder="E-mail"
               onChange={handleEmail}
             />
             <input
+              className = 'signinput'
               type="password"
               name="password"
               placeholder="Password"
               onChange={handlePassword}
             />
 
-            <input type="submit" name="signup_submit" value="Sign me In" />
+            <div className = 'donthaveaccount'>
+              <span>Don't have an account?{' '}</span>
+              <a href = 'signup'>Signup</a>
+            </div>
+            <input type="submit" name="signup_submit" value="Sign me In" className = 'signinput' />
           </form>
         </div>
 
-        <div class="right">
-          <span class="loginwith">
+        <div className="signright">
+          <span className="loginwith">
             Sign in with
             <br />
             social network
           </span>
 
-          <button class="social-signin facebook">Log in with facebook</button>
-          <button class="social-signin twitter">Log in with Twitter</button>
-          <button class="social-signin google">Log in with Google+</button>
+          <button className="social-signin facebook">Log in with facebook</button>
+          <button className="social-signin twitter">Log in with Twitter</button>
+          <button className="social-signin google">Log in with Google+</button>
         </div>
-        <div class="or">OR</div>
+        <div className="or">OR</div>
       </div>
     </>
   );

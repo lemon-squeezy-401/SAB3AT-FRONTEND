@@ -4,10 +4,8 @@ import AddComment from '../AddComment/AddComment';
 
 function CommentsSection(props) {
   console.log('props from comment section component', props);
-  const { serviceComments, serviceId } = props;
+  // const { serviceComments, serviceId } = props;
 
-
-  
   return (
     <>
       <div className="comments-container mt-5">

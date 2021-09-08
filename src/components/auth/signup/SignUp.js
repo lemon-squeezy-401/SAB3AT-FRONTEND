@@ -1,9 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../../../context/authContext';
+import { useHistory } from 'react-router-dom';
 import './signup.css';
 
 function SignUp() {
   const authSettings = useContext(AuthContext);
+  const history = useHistory();
+
   /*==================Signup===================== */
   const [username, setUsername] = useState('');
   const [role, setRole] = useState('user');
@@ -29,27 +32,32 @@ function SignUp() {
   const handleSignup = (event) => {
     event.preventDefault();
     authSettings.signup(username, password, email, role);
+    const path = `/`;
+    history.push(path);
   };
   /*==================Signup===================== */
   return (
     <>
       <div id="login-box">
-        <div class="left">
-          <h1>Sign up</h1>
+        <div className="sign-left">
+          <h1 className = 'sign-h1'>Sign up</h1>
           <form onSubmit={handleSignup}>
             <input
+              className = 'sign-input'
               type="text"
               name="firstName"
               placeholder="Username"
               onChange={handleUsername}
             />
             <input
+              className = 'sign-input'
               type="text"
               name="email"
               placeholder="E-mail"
               onChange={handleEmail}
             />
             <input
+              className = 'sign-input'
               type="password"
               name="password"
               placeholder="Password"
@@ -60,22 +68,22 @@ function SignUp() {
               <option value="user">User</option>
               <option value="admin">Admin</option>
             </select>
-            <input type="submit" name="signup_submit" value="Sign me up" />
+            <input type="submit" name="signup_submit" value="Sign me up" className = 'sign-input' />
           </form>
         </div>
 
-        <div class="right">
-          <span class="loginwith">
+        <div className="sign-right">
+          <span className="loginwith">
             Sign in with
             <br />
             social network
           </span>
 
-          <button class="social-signin facebook">Log in with facebook</button>
-          <button class="social-signin twitter">Log in with Twitter</button>
-          <button class="social-signin google">Log in with Google+</button>
+          <button className="social-signin facebook">Log in with facebook</button>
+          <button className="social-signin twitter">Log in with Twitter</button>
+          <button className="social-signin google">Log in with Google+</button>
         </div>
-        <div class="or">OR</div>
+        <div className="or">OR</div>
       </div>
     </>
   );

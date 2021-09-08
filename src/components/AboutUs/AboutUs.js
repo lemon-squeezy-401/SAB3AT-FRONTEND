@@ -4,7 +4,7 @@ import './AboutUs.css';
 export class AboutUs extends Component {
 	render() {
 		return (
-			<div className=" ">
+			<div className="about-us-page-con">
 				<section className=" sectionAboutUs" id="about-us">
 					{/* <div className="overlay"> */}
 					{/* <div className="whiteSpace"></div> */}

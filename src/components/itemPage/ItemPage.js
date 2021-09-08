@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import SimilarProducts from './SimilarProducts/SimilarProducts';
@@ -7,7 +7,7 @@ import './itemPage.css';
 import img from './cardImg.PNG';
 
 function ItemPage(props) {
-  const [services, setServices] = useState([]);
+  // const [services, setServices] = useState([]);
   let history = useHistory();
 
   const {
@@ -18,7 +18,6 @@ function ItemPage(props) {
     serviceComments,
   } = history.location.state;
 
- 
   return (
     <>
       {/* {console.log('log services from item page', services)} */}
