@@ -81,7 +81,7 @@ function Cart() {
                   <h3>Summary</h3>
                   <div className="summary-item">
                     <span className="text">Subtotal</span>
-                    <span className="price">$360</span>
+                    <span className="price">${servicePrice}</span>
                   </div>
                   <div className="summary-item">
                     <span className="text">Discount</span>
@@ -93,7 +93,7 @@ function Cart() {
                   </div>
                   <div className="summary-item">
                     <span className="text">Total</span>
-                    <span className="price">$360</span>
+                    <span className="price">${servicePrice}</span>
                   </div>
                   <Link to={{ pathname: '/payment' }}>
                     <button
