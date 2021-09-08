@@ -1,0 +1,137 @@
+ /* logo-slider {
+   
+    min-width:  50px;
+    max-width: 100px;
+    
+    /* --image-size: #{$max-image-size}; */
+    
+ /*   border: 1px solid #575757;
+    padding: 20px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;	
+    position: relative;
+    display: flex;
+}
+ logo-slider:hover div {
+          animation-play-state: paused;
+      }
+      
+ logo-slider div { 
+          display: flex;
+          position: relative;
+          animation: marquee 5s linear infinite;
+      justify-content: space-around;
+      
+     
+      }
+          
+ logo-slider div img {
+          display: block;
+          min-width: var(--image-size);
+          height: var(--image-size);
+          margin: 0 1vw;
+      }
+    
+ logo-slider:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: linear-gradient(to right, white, rgba(white, 0) 80px, rgba(white, 0) calc(100% - 80px), white);
+      }
+    
+    /* @media (max-width:900px) {
+      --image-size: #{$min-image-size};
+      --image-size: min(max(#{$min-image-size}, 10vw), #{$max-image-size});
+      } 
+  
+  }*/
+    
+ /* @keyframes marquee {
+      0%   { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+  }   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
+
+
+  logo-slider {
+    --image-size: 100px;
+    /* border: 1px solid #575757;   */
+     padding: 20px;
+     overflow: hidden;
+    max-width: 90rem;  
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+     /* margin-top: -20rem;  */
+height: 20rem;
+}
+logo-slider:hover div {
+    animation-play-state: paused;
+}
+logo-slider div {
+    display: flex;
+    position: relative;
+    animation: marquee 140s linear infinite;
+    justify-content: space-around;
+}
+logo-slider img {
+    display: block;
+    min-width: var(--image-size);
+    height: var(--image-size);
+    margin: 0 1vw;
+}
+logo-slider:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white);
+}
+@media (max-width: 900px) {
+    logo-slider {
+        --image-size: 50px;
+   }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+   }
+    100% {
+        transform: translateX(-100%);
+   }
+}
+
+.P{ 
+     margin-top:3.5rem ;
+     margin-bottom:-.8rem ;
+     text-align: center;
+     font-weight: bolder;
+     font-size: 3rem;
+     letter-spacing: .18rem;
+     text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+     font-family: 'Zilla Slab', serif;
+
+}
