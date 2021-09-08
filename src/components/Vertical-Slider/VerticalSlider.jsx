@@ -5,7 +5,8 @@ import './vertical-slider.css';
 //style thingy
 import upArrow from '../../assets/arrow-up.svg';
 import downArrow from '../../assets/arrow-down.svg';
-
+import icon1 from '../../assets/icon1.svg';
+import arrow from '../../assets/arrow.svg';
 function VerticalSlider() {
   const history = useHistory();
 
@@ -63,13 +64,17 @@ function VerticalSlider() {
       <div className="slider-container">
         <div className="left-slide">
           <div style={{ backgroundColor: '#292E33' }}>
-            <h1>Products</h1>
-            <p>The best products and the cheapest price </p>
+            <h1>Products</h1><br />
+
+
+            <p > Best products <br />   </p> <p className='slider-p1'>  Cheapest price<br /></p> <p className='slider-p2'>At the same place<img src={arrow} alt='pic' /></p>
             <div onClick={productPath} className='path'>Check it out</div>
           </div>
+
+
           <div style={{ backgroundColor: '#252E33' }}>
-            <h1>Services</h1>
-            <p>Looking for the best Services? <br /><br />.... you are in the right place</p>
+            <h1>Services</h1><br />
+            <p className='slider-p3' > &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;Looking for the best Services? <br /><br /><img src={icon1} width='120px' height='40px' alt='pic' className='icon1' /> you are at the right place&nbsp;&nbsp;&nbsp; <img src={arrow} alt='pic' /></p>
             <div onClick={servicesPath} className='path'>Check it out</div>
           </div>
         </div>
@@ -88,7 +93,7 @@ function VerticalSlider() {
           </button>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
