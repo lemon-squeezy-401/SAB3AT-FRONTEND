@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './cart.css';
 import SimilarProducts from '../itemPage/SimilarProducts/SimilarProducts';
+import axios from 'axios';
 function Cart() {
   let history = useHistory();
+
+  // let arr = [];
+
+  const localData = localStorage.getItem('cart');
+  const cartData = JSON.parse(localData);
+  // arr.push(cartData);
+
+  // console.log(arr);
 
   const {
     serviceId,
     serviceTitle,
     serviceDescription,
     servicePrice,
+    serviceImg,
     // serviceComments,
   } = history.location.state;
   return (
@@ -28,9 +39,7 @@ function Cart() {
                       <div className="col-md-3">
                         <img
                           className="img-fluid mx-auto d-block image"
-                          src={
-                            'https://m.media-amazon.com/images/I/71e9Ffo1AvL._AC_SY450_.jpg'
-                          }
+                          src={serviceImg}
                           alt=""
                         />
                       </div>
@@ -71,103 +80,6 @@ function Cart() {
                       </div>
                     </div>
                   </div>
-                  {/* //-------------------------// */}
-                  {/* <div className="product">
-                    <div className="row">
-                      <div className="col-md-3">
-                        <img
-                          className="img-fluid mx-auto d-block image"
-                          src={
-                            'https://m.media-amazon.com/images/I/71e9Ffo1AvL._AC_SY450_.jpg'
-                          }
-                          alt=""
-                        />
-                      </div>
-                      <div className="col-md-8">
-                        <div className="info">
-                          <div className="row">
-                            <div className="col-md-5 product-name">
-                              <div className="product-name">
-                                <a href="#t">Lorem Ipsum dolor</a>
-                                <div className="product-info">
-                                  <div>
-                                    Display:{' '}
-                                    <span className="value">5 inch</span>
-                                  </div>
-                                  <div>
-                                    RAM: <span className="value">4GB</span>
-                                  </div>
-                                  <div>
-                                    Memory: <span className="value">32GB</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-md-4 quantity">
-                              <label for="quantity">Quantity:</label>
-                              <input
-                                id="quantity"
-                                type="number"
-                                value="1"
-                                className="form-control quantity-input"
-                              />
-                            </div>
-                            <div className="col-md-3 price">
-                              <span>$120</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product">
-                    <div className="row">
-                      <div className="col-md-3">
-                        <img
-                          className="img-fluid mx-auto d-block image"
-                          src={
-                            'https://m.media-amazon.com/images/I/71e9Ffo1AvL._AC_SY450_.jpg'
-                          }
-                          alt=""
-                        />
-                      </div>
-                      <div className="col-md-8">
-                        <div className="info">
-                          <div className="row">
-                            <div className="col-md-5 product-name">
-                              <div className="product-name">
-                                <a href="/#">Lorem Ipsum dolor</a>
-                                <div className="product-info">
-                                  <div>
-                                    Display:{' '}
-                                    <span className="value">5 inch</span>
-                                  </div>
-                                  <div>
-                                    RAM: <span className="value">4GB</span>
-                                  </div>
-                                  <div>
-                                    Memory: <span className="value">32GB</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="col-md-4 quantity">
-                              <label for="quantity">Quantity:</label>
-                              <input
-                                id="quantity"
-                                type="number"
-                                value="1"
-                                className="form-control quantity-input"
-                              />
-                            </div>
-                            <div className="col-md-3 price">
-                              <span>$120</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
                 </div>
               </div>
               <div className="col-md-12 col-lg-4">
@@ -189,12 +101,14 @@ function Cart() {
                     <span className="text">Total</span>
                     <span className="price">$360</span>
                   </div>
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-lg btn-block"
-                  >
-                    Checkout
-                  </button>
+                  <Link to={{ pathname: '/payment' }}>
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-lg btn-block"
+                    >
+                      Checkout
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

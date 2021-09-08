@@ -27,10 +27,6 @@ function ServicePage() {
   const { services } = useContext(ServicesContext);
   const classes = useStyles();
 
-
-  let cartArray = [];
-  // console.log('log cartArray from service cards page', cartArray);
-  // console.log('log services from service cards page', services);
   return (
     <Container className={classes.cardGrid} maxWidth="md">
       <Grid container spacing={4}>
@@ -59,6 +55,7 @@ function ServicePage() {
                         serviceTitle: `${service.title}`,
                         serviceDescription: `${service.description}`,
                         servicePrice: `${service.price}`,
+                        serviceImg: `${service.image}`,
                         serviceComments: [`${service.comments}`],
                       },
                     }}
@@ -66,7 +63,12 @@ function ServicePage() {
                     <Button
                       size="small"
                       color="primary"
-                      onClick={() => cartArray.push(service)}
+                      onClick={() => {
+                        let newArr = [];
+                        newArr.push(service);
+                        console.log('aaaaaaaaaaaaaaaaaaa', newArr);
+                        localStorage.setItem('cart', JSON.stringify(service));
+                      }}
                     >
                       ADD TO CART
                     </Button>
@@ -79,6 +81,7 @@ function ServicePage() {
                         serviceTitle: `${service.title}`,
                         serviceDescription: `${service.description}`,
                         servicePrice: `${service.price}`,
+                        serviceImg: `${service.image}`,
                         serviceComments: [`${service.comments}`],
                       },
                     }}

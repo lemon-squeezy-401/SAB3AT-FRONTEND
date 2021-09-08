@@ -69,7 +69,7 @@ function VerticalSlider() {
           </div>
           <div style={{ backgroundColor: '#252E33' }}>
             <h1>Services</h1>
-            <p>Our website is providing a lot of things</p>
+            <p>Looking for the best Services? you are in the right place</p>
             <div onClick={servicesPath} className='path'>Check it out</div>
           </div>
         </div>
