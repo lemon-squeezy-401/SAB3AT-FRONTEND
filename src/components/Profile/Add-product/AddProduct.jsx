@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../../context/authContext';
+// import Alert from 'react-bootstrap/Alert';
 import './addproduct.css';
 
 function AddProduct() {
@@ -9,12 +10,15 @@ function AddProduct() {
   // console.log('this auth setting log from add product code =G',authSettings);
   // console.log(authSettings);
 
+  // const {user} = authSettings;
+  // console.log('log authSettings from add product extracted from auth consext',authSettings);
 
   const [title, setTitle] = useState('');
   const [SKU, setSKU] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [isAvailable, setIsAvailable] = useState('');
+  const [image, setImage] = useState('');
   const [productsList, setProductsList] = useState([]);
 
   const handleTitle = (event) => {
@@ -42,6 +46,11 @@ function AddProduct() {
     // console.log(isAvailable);
   };
 
+  const handleImage = (event) => {
+    setImage(event.target.value);
+    // console.log(isAvailable);
+  };
+
   const handleSubmit = async (event) => {
     try {
       event.preventDefault();
@@ -49,6 +58,7 @@ function AddProduct() {
         title: title,
         SKU: SKU,
         price: price,
+        image: image,
         description: description,
         isAvailable: isAvailable
       };
@@ -56,6 +66,7 @@ function AddProduct() {
       const response = await axios.post(`${API}/profile-product/${id}`, data);
       setProductsList([...productsList, response]);
       // console.log(productsList);
+      // <Alert variant= 'dark'>your product was added to your procducts</Alert>;
     } catch (error) {
       console.error('Adding Error', error);
     }
@@ -89,9 +100,9 @@ function AddProduct() {
             </div>
           </div>
         </div>
-        <div className='add1'>
+        <div className="form-group add1">
           <label className="form-label">Product Image</label>
-          <input className="form-control form-control-sm" id="formFileSm" type="file" />
+          <input onChange={handleImage} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the image address" />
         </div>
         <div className="form-group add1">
           <label>Product Description</label>

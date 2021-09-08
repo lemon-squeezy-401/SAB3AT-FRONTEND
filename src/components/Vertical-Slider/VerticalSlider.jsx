@@ -62,14 +62,14 @@ function VerticalSlider() {
     <div className='slider-body'>
       <div className="slider-container">
         <div className="left-slide">
-          <div style={{ backgroundImage: '#192E33' }}>
+          <div style={{ backgroundColor: '#192E33' }}>
             <h1>Products</h1>
             <p>in the wilderness</p>
             <div onClick={productPath} className='path'>Check it out</div>
           </div>
           <div style={{ backgroundColor: '#252E33' }}>
             <h1>Services</h1>
-            <p>Our website is providing a lot of things</p>
+            <p>Looking for the best Services? you are in the right place</p>
             <div onClick={servicesPath} className='path'>Check it out</div>
           </div>
         </div>

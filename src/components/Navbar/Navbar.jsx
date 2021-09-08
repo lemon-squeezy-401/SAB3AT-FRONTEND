@@ -35,18 +35,18 @@ function Nanbar() {
     <div id='con' className='navbar-body'>
       <nav className={navbar ? 'nav1 active-nav' : 'nav1'}>
         <div className="nav-container1">
-          <h1 className="nav-logo"><a href="/"><img src={logo2} width='180px' height='55px' /></a></h1>
+          <h1 className="nav-logo"><a href="/"><img src={logo1} width='160px' height='40px' /></a></h1>
           <If condition={!authSettings.loggedIn}>
             <Then>
               <ul className='navbar-ul'>
-                <li><a href="/home" className="nav-current">Home</a></li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="/" className="nav-current">Home</a></li>
+                <li><a href="/signin">Login</a></li>
                 <li><a href="/cart">Cart <img src={cartIcon} alt="any" /></a></li>
               </ul>
             </Then>
             <Else>
               <ul className='navbar-ul'>
-                <li><a href="/home" className="nav-current">Home</a></li>
+                <li><a href="/" className="nav-current">Home</a></li>
                 <li><a onClick={authSettings.logout} href="/">Logout</a></li>
                 <li><a href="/cart">Cart <img src={cartIcon} alt="any" /></a></li>
               </ul>

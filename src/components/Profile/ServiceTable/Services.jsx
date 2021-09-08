@@ -5,6 +5,8 @@ import superagent from 'superagent';
 import axios from 'axios';
 import './services.css';
 
+import editIcon from '../../../assets/edit.svg';
+
 function Services() {
   const API = 'https://sab3at.herokuapp.com';
   const authSettings = useContext(AuthContext);
@@ -16,6 +18,7 @@ function Services() {
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [isAvailable, setIsAvailable] = useState('');
+  const [image, setImage] = useState('');
 
 
   const getServicesData = async () => {
@@ -42,7 +45,7 @@ function Services() {
       };
       let response = await superagent.delete(`${API}/profile/${userId}`, data);
       response = servicesList.filter((product) => product._id !== _id);
-      console.log(response);
+      // console.log(response);
       setServicesList(response);
     } catch (error) {
       console.error('Delete Error', error);
@@ -75,22 +78,25 @@ function Services() {
     setIsAvailable(event.target.value);
   };
 
+  const handleImage = (event) => {
+    setImage(event.target.value);
+  };
+
   const handleUpdate = async (event) => {
-    console.log(activeId);
+    // console.log(activeId);
     try {
       event.preventDefault();
       const id = authSettings.user.id;
       let data;
-      // const needUpdate = servicesList.map((service) => {
       data = {
         _id: activeId,
         title: title,
         SKU: SKU,
         price: price,
+        image: image,
         description: description,
         isAvailable: isAvailable,
       };
-      // });
       const response = await axios.put(`${API}/profile/${id}`, data);
       setServicesList([...servicesList, response]);
     } catch (error) {
@@ -133,7 +139,7 @@ function Services() {
                         handleShow(service._id);
                       }}
                     >
-                      &#10002;
+                      <img src = {editIcon} alt="edi" />
                     </div>
                   </td>
                   <td>
@@ -182,7 +188,7 @@ function Services() {
       <div>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Edit Service Info</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <form>
@@ -231,13 +237,9 @@ function Services() {
                   </div>
                 </div>
               </div>
-              <div className="add1">
+              <div className="form-group add1">
                 <label className="form-label">Service Image</label>
-                <input
-                  className="form-control form-control-sm"
-                  id="formFileSm"
-                  type="file"
-                />
+                <input onChange={handleImage} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the image address" />
               </div>
               <div className="form-group add1">
                 <label>Service Description</label>
@@ -262,10 +264,10 @@ function Services() {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <button variant="secondary" onClick={handleClose}>
+            <button className = 'serPro-close' variant="secondary" onClick={handleClose}>
               Close
             </button>
-            <button variant="primary" onClick={handleUpdate}>
+            <button className = 'serPro-save' variant="primary" onClick={handleUpdate}>
               Save Changes
             </button>
           </Modal.Footer>

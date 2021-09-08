@@ -4,7 +4,7 @@ import './AboutUs.css';
 export class AboutUs extends Component {
 	render() {
 		return (
-			<div className=" ">
+			<div className="about-us-page-con">
 				<section className=" sectionAboutUs" id="about-us">
 					{/* <div className="overlay"> */}
 					{/* <div className="whiteSpace"></div> */}
@@ -21,7 +21,7 @@ export class AboutUs extends Component {
 						</div>
 						<div className="titleArea">
 							<h3>Our Developers Team:</h3>
-							<div className="linesOutWhite">✻</div>
+							<div style = {{marginBottom: '6rem'}} className="linesOutWhite">✻</div>
 						</div></section>
 					<div className="aboutUsContainer">
 

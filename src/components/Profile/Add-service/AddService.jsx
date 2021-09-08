@@ -12,6 +12,7 @@ function AddService() {
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [isAvailable, setIsAvailable] = useState('');
+  const [image, setImage] = useState('');
   const [servicesList, setServicesList] = useState([]);
 
   const handleTitle = (event) => {
@@ -39,6 +40,11 @@ function AddService() {
     // console.log(isAvailable);
   };
 
+  const handleImage = (event) => {
+    setImage(event.target.value);
+    // console.log(isAvailable);
+  };
+
   const handleSubmit = async (event, _id) => {
     try {
       event.preventDefault();
@@ -47,6 +53,7 @@ function AddService() {
         title: title,
         SKU: SKU,
         price: price,
+        image: image,
         description: description,
         isAvailable: isAvailable
       };
@@ -88,9 +95,9 @@ function AddService() {
               </div>
             </div>
           </div>
-          <div className = 'add1'>
+          <div className="form-group add1">
             <label className="form-label">Service Image</label>
-            <input className="form-control form-control-sm" id="formFileSm" type="file" />
+            <input onChange={handleImage} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter the image address" />
           </div>
           <div className="form-group add1">
             <label>Service Description</label>

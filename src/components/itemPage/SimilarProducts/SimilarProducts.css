@@ -1,5 +1,5 @@
 .movie-similar {
-  margin: 7% 6%;
+  margin: 7% 0%;
 }
 .section-header {
   position: relative;
@@ -35,7 +35,7 @@
 
 .movies-suf {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: center;
 }
 .movie-card {

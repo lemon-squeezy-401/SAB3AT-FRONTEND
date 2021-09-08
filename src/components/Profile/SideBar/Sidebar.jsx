@@ -15,6 +15,7 @@ import AddService from '../Add-service/AddService';
 function Sidebar() {
   const navSettings = useContext(NavContext);
   const authSettings = useContext(AuthContext);
+  // console.log(authSettings);
 
   const routes = [
     {
@@ -22,6 +23,12 @@ function Sidebar() {
       exact: false,
       sidebar: () => <div>dashboard</div>,
       main: () => <Dashboard/>
+    },
+    {
+      path: '/admin',
+      exact: false,
+      sidebar: () => <div>dashboard</div>,
+      // main: () => <Dashboard/>
     },
     {
       path: '/my-product',
@@ -54,15 +61,11 @@ function Sidebar() {
         <Offcanvas.Body>
           <ul className = 'side-ul'>
             <li className = 'side-li'><Link className = 'side-a' to="/dashboard">Dashboard</Link></li>
+            <li className = 'side-li'><Link className = 'side-a' to="/admin">Admin Dashboard</Link></li>
             <li className = 'side-li'><Link className = 'side-a' to="/my-product">My Products</Link></li>
             <li className = 'side-li'><Link className = 'side-a' to="/my-service">My Servives</Link></li>
             <li className = 'side-li'><Link className = 'side-a' to="/add-product">Add Product</Link></li>
             <li className = 'side-li'><Link className = 'side-a' to="/add-service">Add Servive</Link></li>
-            {/* <li className = 'side-li'><a className = 'side-a' href="/dash">Dashboard</a></li>
-            <li className = 'side-li'><a className = 'side-a' href="#product">My Products</a></li>
-            <li className = 'side-li'><a className = 'side-a' href="#service">My Servives</a></li>
-            <li className = 'side-li'><a className = 'side-a' href="#service">Add Product</a></li>
-            <li className = 'side-li'><a className = 'side-a' href="#service">Add Servive</a></li> */}
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
