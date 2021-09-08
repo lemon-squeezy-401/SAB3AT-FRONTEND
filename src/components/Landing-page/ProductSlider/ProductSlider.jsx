@@ -1,7 +1,7 @@
 /* eslint-disable no-lone-blocks */
 import React, { useContext } from 'react';
 import './ProductSlider.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { ProductsContext } from '../../../context/AllProducts';
 
 export function Slider() {
