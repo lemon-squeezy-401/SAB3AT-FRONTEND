@@ -1,5 +1,16 @@
 import React, { useContext } from 'react';
-import { Container, Typography, Grid, Card, CardMedia, CardContent, CardActions, Button, makeStyles} from '@material-ui/core/';
+import {
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Button,
+  makeStyles,
+} from '@material-ui/core/';
+// import { ShoppingCart, Visibility } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import { ServicesContext } from '../../../context/AllServices';
 // import './ServiceCards.css';
@@ -8,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(20),
     // paddingBottom: theme.spacing(8),
-    marginBottom: theme.spacing(-20)
+    marginBottom: theme.spacing(-20),
   },
   card: {
     height: '100%',
@@ -71,6 +82,7 @@ function ServicePage() {
                       }}
                     >
                       ADD TO CART
+                      {/* <ShoppingCart  /> */}
                     </Button>
                   </Link>
                   <Link
@@ -88,6 +100,7 @@ function ServicePage() {
                   >
                     <Button size="small" color="primary">
                       VIEW DETAILS
+                      {/* <Visibility /> */}
                     </Button>
                   </Link>
                 </CardActions>
