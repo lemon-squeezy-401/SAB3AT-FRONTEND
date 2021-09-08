@@ -109,12 +109,7 @@ function ProductCard() {
                         borderRadius: '5px',
                         backgroundColor: '#0275d8',
                         color: '#fff',
-
-                        borderRadius: '5px',
-                        backgroundColor: '#0275d8',
-                        color: '#fff',
-
-                        marginBottom: '11px'
+                        marginBottom: '11px',
 
                       }}
                       size="small"
