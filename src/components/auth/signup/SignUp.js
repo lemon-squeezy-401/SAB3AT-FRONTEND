@@ -68,7 +68,7 @@ function SignUp() {
               <option value="user">User</option>
               <option value="admin">Admin</option>
             </select>
-            <input type="submit" name="signup_submit" value="Sign me up" className = 'sign-input' />
+            <input type="submit" name="signup_submit" value="Sign up" className = 'sign-input' />
           </form>
         </div>
 

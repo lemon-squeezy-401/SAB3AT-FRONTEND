@@ -40,7 +40,7 @@ function ServicePage() {
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  // image={product.url}
+                  image={service.image}
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>

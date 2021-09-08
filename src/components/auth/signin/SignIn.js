@@ -52,7 +52,7 @@ function SignIn() {
               <span>Don't have an account?{' '}</span>
               <a href = 'signup'>Signup</a>
             </div>
-            <input type="submit" name="signup_submit" value="Sign me In" className = 'signinput' />
+            <input type="submit" name="signup_submit" value="Sign In" className = 'signinput' />
           </form>
         </div>
 

@@ -9,7 +9,7 @@ export class ServiceSlider extends Component {
         <p className="PS"> Best selling Services</p>
 
         <logo-slider>
-          https://khamsat.hsoubcdn.com/images/services/1241440/262b557d5e0f67cacfbe597168f74230.jpg
+          {/* https://khamsat.hsoubcdn.com/images/services/1241440/262b557d5e0f67cacfbe597168f74230.jpg */}
           <div>
             <img src="https://khamsat.hsoubcdn.com/images/services/1241440/262b557d5e0f67cacfbe597168f74230.jpg" alt='pic' />
             <img src="https://image.shutterstock.com/image-photo/closeup-hand-young-asian-woman-600w-1932043229.jpg" alt='pic' />
