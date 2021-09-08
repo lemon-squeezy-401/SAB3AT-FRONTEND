@@ -15,7 +15,7 @@ import AddService from '../Add-service/AddService';
 function Sidebar() {
   const navSettings = useContext(NavContext);
   const authSettings = useContext(AuthContext);
-  console.log(authSettings);
+  // console.log(authSettings);
 
   const routes = [
     {

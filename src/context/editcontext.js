@@ -29,7 +29,7 @@ function EditSettings(props) {
           service.isAvailable = isAvailable;
           data = service;
         }
-        console.log(_id);
+        // console.log(_id);
         return service;
       });
       await axios.put(`${API}/service/${id}`, data);

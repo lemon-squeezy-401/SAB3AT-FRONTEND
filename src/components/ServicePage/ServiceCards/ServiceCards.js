@@ -66,7 +66,7 @@ function ServicePage() {
                       onClick={() => {
                         let newArr = [];
                         newArr.push(service);
-                        console.log('aaaaaaaaaaaaaaaaaaa', newArr);
+                        // console.log('aaaaaaaaaaaaaaaaaaa', newArr);
                         localStorage.setItem('cart', JSON.stringify(service));
                       }}
                     >
