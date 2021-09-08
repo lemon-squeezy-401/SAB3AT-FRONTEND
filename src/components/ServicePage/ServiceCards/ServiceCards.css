@@ -96,7 +96,7 @@
 }
 
 .product2 {
-	position: relative;
+	position: relative; 
 	max-width: 360px;
 	margin: 20px;
  border:2px solid rgba(180,180,180,0.4); 
@@ -106,6 +106,7 @@
 	/* background-color: #fff;
    */
 }
+
 
 /*.product2:hover {	 
 	 box-shadow: 0px 15px 11px -10px rgba(0,0,0,0.2);  
