@@ -60,7 +60,7 @@ function ProductCard() {
                     {product.title}
                   </Typography>
                   <Typography>Description: {product.description}</Typography>
-                  <Typography>Price: ${product.price}</Typography>
+                  <Typography fontWeight='bold'>Price: ${product.price}</Typography>
                 </CardContent>
                 <CardActions>
                   <Link
@@ -82,6 +82,9 @@ function ProductCard() {
                         borderRadius: '5px',
                         backgroundColor: '#0275d8',
                         color: '#fff',
+                        marginRight: '20px',
+                        marginLeft: '15px',
+                        marginBottom: '11px'
                       }}
                       size="small"
                       onClick={() => cartArray.push(product)}
@@ -108,6 +111,8 @@ function ProductCard() {
                         borderRadius: '5px',
                         backgroundColor: '#0275d8',
                         color: '#fff',
+                        marginBottom: '11px',
+
                       }}
                       size="small"
                     >

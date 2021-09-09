@@ -8,8 +8,8 @@ function LandingPage() {
   return (
     <div>
       <VerticalSlider />
-      <ProductSlider />
       <ServiceSlider />
+      <ProductSlider />
     </div>
   );
 }
