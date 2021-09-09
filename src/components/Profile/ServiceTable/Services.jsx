@@ -159,7 +159,7 @@ function Services() {
       <br />
       <br />
       {/* requested services */}
-      <h2>Requests List</h2>
+      {/* <h2>Requests List</h2>
       <table className="table table-bordered">
         <thead>
           <tr>
@@ -183,7 +183,7 @@ function Services() {
             </td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
       {/* <ServicePopup/> */}
       <div>
         <Modal show={show} onHide={handleClose}>

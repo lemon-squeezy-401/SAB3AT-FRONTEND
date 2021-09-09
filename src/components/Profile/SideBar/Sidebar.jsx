@@ -61,11 +61,11 @@ function Sidebar() {
         <Offcanvas.Body>
           <ul className = 'side-ul'>
             <li className = 'side-li'><Link className = 'side-a' to="/dashboard">Dashboard</Link></li>
-            <li className = 'side-li'><Link className = 'side-a' to="/admin">Admin Dashboard</Link></li>
-            <li className = 'side-li'><Link className = 'side-a' to="/my-product">My Products</Link></li>
+            <li className = 'side-li'><Link className = 'side-a' to="/add-service">Add Servive</Link></li>
             <li className = 'side-li'><Link className = 'side-a' to="/my-service">My Servives</Link></li>
             <li className = 'side-li'><Link className = 'side-a' to="/add-product">Add Product</Link></li>
-            <li className = 'side-li'><Link className = 'side-a' to="/add-service">Add Servive</Link></li>
+            <li className = 'side-li'><Link className = 'side-a' to="/my-product">My Products</Link></li>
+            <li className = 'side-li'><Link className = 'side-a' to="/admin">Admin Dashboard</Link></li>
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
