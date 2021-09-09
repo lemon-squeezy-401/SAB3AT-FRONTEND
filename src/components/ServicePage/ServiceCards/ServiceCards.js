@@ -73,6 +73,14 @@ function ServicePage() {
                     }}
                   >
                     <Button
+                      style={{
+                        borderRadius: '5px',
+                        backgroundColor: '#0275d8',
+                        color: '#fff',
+                        marginRight: '20px',
+                        marginLeft: '15px',
+                        marginBottom: '11px'
+                      }}
                       size="small"
                       color="primary"
                       onClick={() => {
@@ -87,7 +95,7 @@ function ServicePage() {
                     </Button>
                   </Link>
                   <Link
-                    style={{ textDecoration: 'none'}}
+                    style={{ textDecoration: 'none' }}
                     to={{
                       pathname: '/item',
                       state: {
@@ -100,7 +108,15 @@ function ServicePage() {
                       },
                     }}
                   >
-                    <Button size="small" color="primary">
+                    <Button
+                      style={{
+                        borderRadius: '5px',
+                        backgroundColor: '#0275d8',
+                        color: '#fff',
+                        marginBottom: '11px',
+
+                      }}
+                      size="small" color="primary">
                       VIEW DETAILS
                       {/* <Visibility /> */}
                     </Button>
