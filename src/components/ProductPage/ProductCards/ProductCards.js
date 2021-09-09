@@ -50,7 +50,7 @@ function ProductCard() {
             <Grid item key={product._id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
-                  style = {{borderBottom: '1px solid #ccc'}}
+                  style={{ borderBottom: '1px solid #ccc' }}
                   className={classes.cardMedia}
                   image={product.image}
                   title="Image title"
