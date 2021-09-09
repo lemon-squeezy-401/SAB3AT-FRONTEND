@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function ProductCard() {
   const { products } = useContext(ProductsContext);
   const classes = useStyles();
@@ -49,6 +50,7 @@ function ProductCard() {
             <Grid item key={product._id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardMedia
+                  style = {{borderBottom: '1px solid #ccc'}}
                   className={classes.cardMedia}
                   image={product.image}
                   title="Image title"
@@ -87,7 +89,7 @@ function ProductCard() {
                       size="small"
                       onClick={() => cartArray.push(product)}
                     >
-                      ADD TO CART
+                      ADD To Cart
                     </Button>
                   </Link>
                   <Link

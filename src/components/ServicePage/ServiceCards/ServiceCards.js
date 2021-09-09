@@ -59,6 +59,7 @@ function ServicePage() {
                 </CardContent>
                 <CardActions>
                   <Link
+                    style={{ textDecoration: 'none' }}
                     to={{
                       pathname: '/cart',
                       state: {
@@ -86,6 +87,7 @@ function ServicePage() {
                     </Button>
                   </Link>
                   <Link
+                    style={{ textDecoration: 'none'}}
                     to={{
                       pathname: '/item',
                       state: {
